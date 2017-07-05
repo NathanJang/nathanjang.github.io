@@ -1,13 +1,21 @@
 /** helpers */
 
 .scroll-indicator {
-  /*position: absolute;*/
-  top: -50%;
   font-size: 18pt;
   animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+  -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
 }
 
 @keyframes bounce-scroll-indicator {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 38px;
+  }
+}
+
+@-webkit-keyframes bounce-scroll-indicator {
   from {
     bottom: 30px;
   }
@@ -23,7 +31,7 @@
   overflow-y: auto;
 }
 
-@media (min-width: 992px) { /* >= md */
+@media (min-width: 768px) { /* >= sm */
   .profile-container {
     height: 100vh;
     overflow-y: hidden;
@@ -39,15 +47,18 @@
   position: relative;
 }
 
-@media (min-width: 992px) { /* >= md */
+@media (min-width: 768px) { /* >= sm */
   .profile-content {
-    height: 100%;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 992px) { /* >= md */
+  .profile-content {
+    height: 100%;
   }
 }
 
@@ -61,8 +72,6 @@
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
   }
 }
@@ -85,5 +94,4 @@
 .experience-heading {
   text-align: center;
   color: #fff;
-  margin-top: 60px;
 }
