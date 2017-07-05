@@ -8,12 +8,12 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/nathanjang/nathanjang.github.io",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" --branch 'master'; git push origin master; git checkout -"
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages\nFrom commit $(git rev-parse HEAD)\" --branch \"master\"; git push origin master; git checkout -"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
