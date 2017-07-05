@@ -1,4 +1,4 @@
-<div class="containter-fluid profile-container">
+<div class="profile-container containter-fluid">
   <div class="profile-content">
     <div class="col-xs-3 col-sm-4 col-md-1" aria-hidden="true"></div>
     <div class="col-xs-6 col-sm-4 col-md-3 profile-cell" aria-hidden="true">
@@ -9,23 +9,18 @@
       <h1 class="profile-title">Jonathan Chan</h1>
       <p class="profile-subtitle lead">Computer Science, Northwestern University &apos;2020</p>
       <p>
-        <a href="https://github.com/NathanJang" target="_blank" class="profile-link btn btn-default" aria-label="GitHub Profile">
-          <img src="github-icon.png" alt="GitHub Icon" class="profile-icon" aria-hidden="true">
-          NathanJang
-        </a>
-        <a href="https://linkedin.com/in/jonathanchanyc" target="_blank" class="profile-link btn btn-default" aria-label="LinkedIn Profile">
-          <img src="linkedin-icon.png" alt="GitHub Icon" class="profile-icon" aria-hidden="true">
-          jonathanchanyc
-        </a>
-        <a href="https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691" target="_blank" class="profile-link btn btn-default" aria-label="App Store Profile">
-          <img src="app-store-icon.png" alt="LinkedIn Icon" class="profile-icon" aria-hidden="true">
-          Jonathan Chan
-        </a>
+        {{#each profileLinks as |profileLink|}}
+          {{profile-link-button profileLink=profileLink tagName='span'}}
+        {{/each}}
       </p>
     </div>
   </div>
 </div>
 
-<div class="scroll-indicator col-xs-12 text-center text-muted" aria-hidden="true" hidden="hidden">
+<div class="scroll-indicator col-xs-12 text-center text-muted" aria-hidden="true">
   <span class="glyphicon glyphicon-menu-down"></span>
+</div>
+
+<div class="experience-container container-fluid">
+  <h1 class="experience-heading">Education and Work</h1>
 </div>
