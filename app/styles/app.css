@@ -2,25 +2,50 @@
 
 .scroll-indicator {
   font-size: 18pt;
-  animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
-  -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+  animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator-lightly;
+  -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator-lightly;
 }
 
-@keyframes bounce-scroll-indicator {
+@media (min-width: 768px) { /* >= sm */
+  .scroll-indicator {
+    animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+    -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+  }
+}
+
+@keyframes bounce-scroll-indicator-lightly {
   from {
     bottom: 30px;
   }
   to {
     bottom: 38px;
+  }
+}
+
+@-webkit-keyframes bounce-scroll-indicator-lightly {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 38px;
+  }
+}
+
+@keyframes bounce-scroll-indicator {
+  from {
+    bottom: 52px;
+  }
+  to {
+    bottom: 64px;
   }
 }
 
 @-webkit-keyframes bounce-scroll-indicator {
   from {
-    bottom: 30px;
+    bottom: 52px;
   }
   to {
-    bottom: 38px;
+    bottom: 64px;
   }
 }
 
