@@ -8,11 +8,11 @@
     <div class="col-xs-12 col-md-8 profile-cell">
       <h1 class="profile-title">Jonathan Chan</h1>
       <p class="profile-subtitle lead">Computer Science, Northwestern University &apos;2020</p>
-      <p>
+      <ul class="profile-links">
         {{#each profileLinks as |profileLink|}}
-          {{profile-link-button profileLink=profileLink tagName='span'}}
+          {{profile-link-button profileLink=profileLink tagName='li' classNames='profile-link-item'}}
         {{/each}}
-      </p>
+      </ul>
     </div>
   </div>
 </div>
