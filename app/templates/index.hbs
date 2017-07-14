@@ -1,26 +1,3 @@
-<div class="profile-container containter-fluid">
-  <div class="profile-content">
-    <div class="col-xs-3 col-sm-4 col-md-1" aria-hidden="true"></div>
-    <div class="col-xs-6 col-sm-4 col-md-3 profile-cell" aria-hidden="true">
-      <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture img-circle img-responsive center-block">
-    </div>
-    <div class="visible-xs-3 visible-sm-4" aria-hidden="true"></div>
-    <div class="col-xs-12 col-md-8 profile-cell">
-      <h1 class="profile-title">Jonathan Chan</h1>
-      <p class="profile-subtitle lead">Computer Science, Northwestern University &apos;2020</p>
-      <ul class="profile-links">
-        {{#each profileLinks as |profileLink|}}
-          {{profile-link-button profileLink=profileLink tagName='li' classNames='profile-link-item'}}
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-</div>
+{{profile-page}}
 
-<div class="scroll-indicator col-xs-12 text-center text-muted" aria-hidden="true">
-  <span class="glyphicon glyphicon-menu-down"></span>
-</div>
-
-<div class="experience-container container-fluid">
-  <h1 class="experience-heading">Education and Work</h1>
-</div>
+{{experience-page}}
