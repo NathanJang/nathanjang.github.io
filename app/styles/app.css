@@ -27,7 +27,7 @@
     bottom: 52px;
   }
   to {
-    bottom: 64px;
+    bottom:   64px;
   }
 }
 
@@ -48,6 +48,11 @@
 
 .profile-container, .profile-link-button {
   background-color: #f7f7f9;
+}
+
+.profile-link-button {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .profile-content {
