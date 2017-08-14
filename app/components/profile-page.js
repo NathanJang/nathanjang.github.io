@@ -7,21 +7,21 @@ export default Ember.Component.extend({
     ProfileLink.create({
       url: 'https://github.com/NathanJang',
       ariaLabel: 'GitHub Profile',
-      icon: 'github-icon.png',
+      icon: 'assets/github-icon.png',
       altText: 'GitHub Icon',
       username: 'NathanJang'
     }),
     ProfileLink.create({
       url: 'https://linkedin.com/in/jonathanchanyc',
       ariaLabel: 'LinkedIn Profile',
-      icon: 'linkedin-icon.png',
+      icon: 'assets/linkedin-icon.png',
       altText: 'LinkedIn Icon',
       username: 'jonathanchanyc'
     }),
     ProfileLink.create({
       url: 'https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691',
       ariaLabel: 'App Store Profile',
-      icon: 'app-store-icon.png',
+      icon: 'assets/app-store-icon.png',
       altText: 'App Store Icon',
       username: 'Jonathan Chan'
     })
