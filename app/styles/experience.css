@@ -1,13 +1,15 @@
 .experience-container {
-  background-color: #53669b;
-  background: linear-gradient(to bottom, #37415c, #53669b);
+  /*background-color: #53669b;*/
+  background: linear-gradient(to bottom, #3b6576, #577aac);
   background-repeat: repeat-x;
   min-height: 1000px;
-  color: #fff;
+  color: #ddd;
+  padding-top: 50px;
 }
 
 .experience-heading {
   text-align: center;
+  color: #fff;
 }
 
 .project-cards-container {
@@ -20,12 +22,31 @@
 }
 
 .project-card {
-  border: solid 1px #fff;
+  border: solid 1px #ddd;
   border-radius: 5px;
   padding: 15px;
+  height: 100%;
 }
 
-.project-icon {
+.project-card-cell a:hover {
+  text-decoration: none;
+}
+
+.project-card:hover {
+  background-color: #657bbb;
+}
+
+.project-card-title {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.project-card-description {
+  color: #ddd;
+}
+
+.project-card-icon {
   width: 100px;
   border-radius: 20px;
+  margin: 15px;
 }
