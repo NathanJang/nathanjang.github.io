@@ -1,25 +1,26 @@
 import Ember from 'ember';
 import ProfileLink from '../util/profile-link';
+import links from '../util/links';
 
 export default Ember.Component.extend({
 
   profileLinks: Ember.A([
     ProfileLink.create({
-      url: 'https://github.com/NathanJang',
+      url: links.github,
       ariaLabel: 'GitHub Profile',
       icon: 'assets/github-icon.png',
       altText: 'GitHub Icon',
       username: 'NathanJang'
     }),
     ProfileLink.create({
-      url: 'https://linkedin.com/in/jonathanchanyc',
+      url: links.linkedin,
       ariaLabel: 'LinkedIn Profile',
       icon: 'assets/linkedin-icon.png',
       altText: 'LinkedIn Icon',
       username: 'jonathanchanyc'
     }),
     ProfileLink.create({
-      url: 'https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691',
+      url: links.appStore,
       ariaLabel: 'App Store Profile',
       icon: 'assets/app-store-icon.png',
       altText: 'App Store Icon',
