@@ -9,6 +9,7 @@ export default Ember.Component.extend({
       title: 'MeowlWatch',
       description: 'An iOS app to help Northwestern Students get the most out of their meal plan. In talks with Northwestern Dining to make it even better.',
       iconPath: 'assets/meowlwatch-logo.png',
+      shouldMaskIcon: true,
       iconAltText: 'MeowlWatch Logo',
       linkTitleText: 'See MeowlWatch on the App Store.',
       href: links.meowlwatch
@@ -17,6 +18,7 @@ export default Ember.Component.extend({
       title: '.dev',
       description: 'Software Development Director and Co-Founder. A new club at Northwestern for devs to connect and make cool stuff. Website coming soon.',
       iconPath: 'assets/dotdev-icon.png',
+      shouldMaskIcon: true,
       iconAltText: '.dev Logo',
       linkTitleText: 'See the .dev organization profile on Wildcat Connection.',
       href: links.dotDev

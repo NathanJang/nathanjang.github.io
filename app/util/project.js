@@ -4,6 +4,7 @@ export default Ember.Object.extend({
   title: '',
   description: '',
   iconPath: '',
+  shouldMaskIcon: false,
   iconAltText: '',
   linkTitleText: '',
   href: ''

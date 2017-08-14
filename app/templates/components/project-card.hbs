@@ -1,6 +1,6 @@
 <a href={{project.href}} target="_blank" title={{project.linkTitleText}}>
   <div class="project-card text-center">
-    <img src={{project.iconPath}} alt={{project.iconAltText}} class="project-card-icon" aria-hidden="true">
+    <img src={{project.iconPath}} alt={{project.iconAltText}} class="project-card-icon {{if project.shouldMaskIcon 'project-card-icon-masked'}}" aria-hidden="true">
     <h2 class="project-card-title">{{project.title}}</h2>
     <p class="project-card-description">{{project.description}}</p>
   </div>

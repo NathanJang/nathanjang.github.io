@@ -68,6 +68,9 @@
 .project-card-icon {
   max-height: 100px;
   max-width: 100%;
-  border-radius: 20%;
   margin: 15px 0;
+}
+
+.project-card-icon-masked {
+  border-radius: 20%;
 }
