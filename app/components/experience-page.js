@@ -8,19 +8,22 @@ export default Ember.Component.extend({
       title: 'MeowlWatch',
       description: 'An iOS app to help Northwestern Students get the most out of their meal plan.',
       iconPath: 'meowlwatch-logo.png',
-      iconAltText: 'MeowlWatch Logo'
+      iconAltText: 'MeowlWatch Logo',
+      href: 'https://itunes.apple.com/us/app/meowlwatch-for-northwestern-university-dining/id1219875692?mt=8'
     }),
     Project.create({
       title: '.dev',
-      description: 'Software Dev Director and Co-Founder at a new club at Northwestern for software devs to connect and make cool stuff.',
-      iconPath: 'meowlwatch-logo.png',
-      iconAltText: '.dev Logo'
+      description: 'Software Dev Director and Co-Founder of a new club at Northwestern for software devs to connect and make cool stuff.',
+      iconPath: 'dotdev-icon.png',
+      iconAltText: '.dev Logo',
+      href: 'https://northwestern.campuslabs.com/engage/organization/dotdev'
     }),
     Project.create({
-      title: 'EPIC',
-      description: 'Software Dev for the Wildhacks team to plan an awesome hackathon.',
-      iconPath: 'meowlwatch-logo.png',
-      iconAltText: 'EPIC Logo'
+      title: 'Wildhacks',
+      description: Ember.String.htmlSafe('Software Dev for the Wildhacks team at <a href="https://nuisepic.org" target="_blank">Northwestern Entrepreneurs In Action (EPIC)</a> to plan an awesome hackathon.'),
+      iconPath: 'wildhacks-wordmark.svg',
+      iconAltText: 'Wildhacks',
+      href: 'http://wildhacks.org'
     }),
   ])
 

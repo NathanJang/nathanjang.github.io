@@ -28,12 +28,18 @@
   height: 100%;
 }
 
-.project-card-cell a:hover {
+.project-card-cell > a:hover {
   text-decoration: none;
 }
 
 .project-card:hover {
   background-color: #657bbb;
+  cursor: pointer;
+}
+
+.project-card-description a {
+  color: #bbb;
+  text-decoration: underline;
 }
 
 .project-card-title {
