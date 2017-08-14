@@ -1,0 +1,42 @@
+.scroll-indicator {
+  font-size: 18pt;
+  animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+  -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+}
+
+@media (min-width: 768px) { /* >= sm */
+  .scroll-indicator {
+    animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+    -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
+  }
+}
+
+@keyframes bounce-scroll-indicator {
+  from {
+    bottom: 52px;
+  }
+  to {
+    bottom: 64px;
+  }
+}
+
+@-webkit-keyframes bounce-scroll-indicator {
+  from {
+    bottom: 52px;
+  }
+  to {
+    bottom:   64px;
+  }
+}
+
+.no-select, img {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}

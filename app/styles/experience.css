@@ -1,0 +1,31 @@
+.experience-container {
+  background-color: #53669b;
+  background: linear-gradient(to bottom, #37415c, #53669b);
+  background-repeat: repeat-x;
+  min-height: 1000px;
+  color: #fff;
+}
+
+.experience-heading {
+  text-align: center;
+}
+
+.project-cards-container {
+  margin-top: 40px;
+  width: 66.67%;
+}
+
+.project-card-cell {
+  padding: 7px;
+}
+
+.project-card {
+  border: solid 1px #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.project-icon {
+  width: 100px;
+  border-radius: 20px;
+}
