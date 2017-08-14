@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Project from '../helpers/project';
+import Project from '../util/project';
 
 export default Ember.Component.extend({
 

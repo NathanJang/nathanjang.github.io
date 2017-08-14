@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ProfileLink from '../helpers/profile-link';
+import ProfileLink from '../util/profile-link';
 
 export default Ember.Component.extend({
 
