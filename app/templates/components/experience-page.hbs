@@ -2,8 +2,8 @@
   <h1 class="experience-heading">Highlights</h1>
   <div class="project-cards-container center container">
     <div class="row">
-      {{#each projects as |project|}}
-        {{project-card project=project classNames="project-card-cell col-lg-6 col-12"}}
+      {{#each projects as |project index|}}
+        {{project-card project=project isLastArrayIndex=(is-last-array-index index projects) classNames="project-card-cell col-12"}}
       {{/each}}
     </div>
   </div>
