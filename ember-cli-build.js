@@ -1,6 +1,5 @@
 /* eslint-env node */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -21,10 +20,6 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  const fontsAssetsTree = new Funnel('bower_components/bootstrap/dist/fonts', {
-    srcDir: '/',
-    destDir: '/fonts'
-  });
 
-  return app.toTree(fontsAssetsTree);
+  return app.toTree();
 };
