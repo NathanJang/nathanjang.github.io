@@ -1,6 +1,6 @@
 <div class="experience-container">
   <h1 class="experience-heading">Highlights</h1>
-  <div class="project-cards-container center container">
+  <div class="project-cards-container container-fluid">
     <div class="row">
       {{#each projects as |project index|}}
         {{project-card project=project isLastArrayIndex=(is-last-array-index index projects) classNames="project-card-cell col-12"}}

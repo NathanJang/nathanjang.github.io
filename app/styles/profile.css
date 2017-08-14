@@ -13,6 +13,7 @@
 
 .profile-container, body {
   background-color: #f7f7f9;
+  overflow-x: hidden;
 }
 
 .profile-links {

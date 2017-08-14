@@ -26,7 +26,7 @@ export default Ember.Component.extend({
       href: 'http://wildhacks.org'
     }),
     Project.create({
-      title: 'Teaching Assistant',
+      title: 'Undergrad Teaching Assistant',
       description: Ember.String.htmlSafe('Fundamentals of Computer Programming in <a href="https://racket-lang.org" target="_blank">Racket</a> since March 2017.'),
       iconPath: 'assets/racket-logo.svg',
       iconAltText: 'Racket',
