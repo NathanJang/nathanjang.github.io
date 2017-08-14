@@ -2,9 +2,8 @@
   /*background-color: #53669b;*/
   background: linear-gradient(to bottom, #3b6576, #577aac);
   background-repeat: repeat-x;
-  min-height: 1000px;
   color: #ddd;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .experience-heading {
@@ -52,7 +51,8 @@
 }
 
 .project-card-icon {
-  width: 100px;
+  height: 100px;
+  max-width: 200px;
   border-radius: 20px;
   margin: 15px;
 }
