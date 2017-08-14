@@ -13,7 +13,13 @@
 
 .project-cards-container {
   margin-top: 40px;
-  width: 66.67%;
+  width: 100%;
+}
+
+@@media (min-width: 768px) {
+  .project-cards-container {
+    width: 66.67%;
+  }
 }
 
 .project-card-cell {
@@ -52,7 +58,7 @@
 
 .project-card-icon {
   height: 100px;
-  max-width: 200px;
+  max-width: 100%;
   border-radius: 20px;
-  margin: 15px;
+  margin: 15px 0;
 }
