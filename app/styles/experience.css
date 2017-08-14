@@ -42,12 +42,12 @@
 }
 
 .project-card:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
 
 .project-card-description a {
-  color: #bbb;
+  color: #f0f0f0;
   text-decoration: underline;
 }
 
