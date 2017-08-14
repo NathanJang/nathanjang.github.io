@@ -65,7 +65,15 @@
 }
 
 .profile-link-item {
-  display: inline;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+@media (min-width: 576px) { /* >= sm */
+  .profile-link-item {
+    display: inline;
+    margin-bottom: 0;
+  }
 }
 
 /** scroll indicator */
