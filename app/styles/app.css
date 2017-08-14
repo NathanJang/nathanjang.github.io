@@ -141,6 +141,14 @@
   padding: 7px;
 }
 
+/*@media (min-width: 768px) { /* >= xs */
+  /*.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}*/
+
 .project-card {
   border: solid 1px #fff;
   border-radius: 5px;
