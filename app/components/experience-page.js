@@ -23,7 +23,7 @@ export default Ember.Component.extend({
       description: Ember.String.htmlSafe('Software Dev for the Wildhacks team at <a href="https://nuisepic.org" target="_blank">Northwestern Entrepreneurs In Action (EPIC)</a> to plan an awesome hackathon. Currently working on attendee tracking system.'),
       iconPath: 'assets/wildhacks-wordmark.svg',
       iconAltText: 'Wildhacks',
-      href: 'https://github.com/NathanJang/wildhacks-2017-qr-scanner'
+      href: 'http://wildhacks.org'
     }),
     Project.create({
       title: 'Teaching Assistant',
