@@ -1,0 +1,14 @@
+{
+  "name": "nathanjang-github-io",
+  "description": "Small description for nathanjang-github-io goes here",
+  "main": "",
+  "authors": [
+    "Jonathan Chan <jonchanyc@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NathanJang/nathanjang.github.io",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.0.0-beta"
+  }
+}

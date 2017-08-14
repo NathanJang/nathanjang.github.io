@@ -43,7 +43,5 @@
     "node": ">= 4"
   },
   "private": true,
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta"
-  }
+  "dependencies": {}
 }
