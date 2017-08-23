@@ -2,6 +2,16 @@
   height: 100vh;
 }
 
+.redeye-container-asleep {
+  background-color: black;
+  color: white;
+}
+
+.redeye-container-awake {
+  background-color: #eee;
+  color: black;
+}
+
 .redeye-row {
   height: 100%;
 }
@@ -17,4 +27,8 @@
 
 .redeye-question {
   font-weight: bold;
+}
+
+.redeye-second-title {
+  margin-top: 20px;
 }

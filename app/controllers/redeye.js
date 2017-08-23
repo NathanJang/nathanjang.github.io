@@ -70,8 +70,17 @@ export default Ember.Controller.extend({
       RedeyeQuestion.create({
         question: 'But why?',
         answer: 'This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷‍♂️'
-      })
+      }),
+      RedeyeQuestion.create({
+        question: 'When is this happening?',
+        answer: 'August 24 to September 1, 2017.'
+      }),
     ]);
+  }),
+
+  containerClassNames: Ember.computed('redeyeState', function () {
+    if (this.get('redeyeState') === 'asleep') { return 'redeye-container-asleep'; }
+    return 'redeye-container-awake';
   }),
 
   actions: {
