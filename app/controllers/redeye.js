@@ -83,7 +83,7 @@ export default Ember.Controller.extend({
       }),
       RedeyeQuestion.create({
         question: 'But why?',
-        answer: 'This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷‍♂️'
+        answer: 'This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷‍'
       })
     ]);
   }),
