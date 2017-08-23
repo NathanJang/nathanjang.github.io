@@ -4,10 +4,7 @@ import RedeyeQuestion from '../util/redeye-question';
 export default Ember.Controller.extend({
 
   init() {
-    this.setDate();
-    const timeout = (60 - this.get('currentDate').getSeconds()) * 1000;
-    Ember.Logger.debug('Initial timeout', timeout);
-    setTimeout(() => this.setUpdateInterval(), timeout);
+    this.setUpdateInterval();
   },
 
   currentDate: null,
@@ -50,16 +47,22 @@ export default Ember.Controller.extend({
     return 'awake';
   }),
 
-  redeyeStateFormatted: Ember.computed('redeyeState', function () {
+  redeyeStateFormatted: Ember.computed('currentDate', function () {
+    const currentDate = this.get('currentDate'), initialSleepDate = this.get('initialSleepDate');
+
+    const difference = (currentDate.getTime() - initialSleepDate.getTime()) / 1000; // in seconds
+    const currentHourOf28hrDay = Math.floor(difference / 60 / 60) % 28;
+    Ember.Logger.debug('currentHourOf28hrDay', currentHourOf28hrDay);
+
     switch (this.get('redeyeState')) {
       case 'waiting':
         return 'Hyped to start soon! 🔥';
       case 'awake':
-        return 'Yep 👍';
+        return `Yep 👍, sleeping in ${Math.ceil(difference / 60) % 60 !== 0 ? 28 - currentHourOf28hrDay - 1 : 28 - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes`;
       case 'asleep':
-        return 'Sleeping 💤'
+        return `Sleeping 💤, waking in ${Math.ceil(difference / 60) % 60 !== 0 ? this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay - 1 : this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes`;
       case 'done':
-        return 'Donezos ✅🔥'
+        return 'Donezos ✅🔥';
     }
   }),
 
@@ -71,17 +74,17 @@ export default Ember.Controller.extend({
         answer: `I'm doing an experiement. Instead of going through a seven-day week as usual, this week will have six 28-hour cycles for me. Each cycle, I will sleep for ${hoursOfSleepPer28hrDay} hours, and be awake for ${28 - hoursOfSleepPer28hrDay}. You can check if I'm awake up there 👆`
       }),
       RedeyeQuestion.create({
+        question: 'When is this happening?',
+        answer: 'August 24 to September 1, 2017.'
+      }),
+      RedeyeQuestion.create({
         question: 'Why 28-hour cycles?',
         answer: '28 times 6 happens to be 24 times 7.'
       }),
       RedeyeQuestion.create({
         question: 'But why?',
         answer: 'This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷‍♂️'
-      }),
-      RedeyeQuestion.create({
-        question: 'When is this happening?',
-        answer: 'August 24 to September 1, 2017.'
-      }),
+      })
     ]);
   }),
 
