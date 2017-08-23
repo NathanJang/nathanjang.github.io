@@ -6,15 +6,21 @@ export default Ember.Controller.extend({
   init() {
     this.setDate();
     const timeout = (60 - this.get('currentDate').getSeconds()) * 1000;
-    setTimeout(timeout, () => this.setUpdateInterval());
+    Ember.Logger.debug('Initial timeout', timeout);
+    setTimeout(() => this.setUpdateInterval(), timeout);
   },
 
   currentDate: null,
 
-  setDate() { this.set('currentDate', new Date()); },
+  setDate() {
+    Ember.Logger.debug('setDate called');
+    this.set('currentDate', new Date());
+  },
 
   setUpdateInterval() {
-    setInterval(60 * 1000, () => this.setDate());
+    Ember.Logger.debug('setUpdateInterval called');
+    this.setDate()
+    setInterval(() => this.setDate(), 60 * 1000);
   },
 
   // The date when we first go to sleep
@@ -32,6 +38,7 @@ export default Ember.Controller.extend({
   //  - done
   redeyeState: Ember.computed('currentDate', function () {
     const currentDate = this.get('currentDate'), initialSleepDate = this.get('initialSleepDate');
+    Ember.Logger.debug('Received dates', 'currentDate', currentDate, 'initialSleepDate', initialSleepDate);
     if (currentDate < initialSleepDate) { return 'waiting'; }
 
     const difference = (currentDate.getTime() - initialSleepDate.getTime()) / 1000; // in seconds
