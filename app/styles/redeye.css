@@ -1,0 +1,35 @@
+.redeye-container {
+  height: 100vh;
+}
+
+.redeye-container-asleep {
+  background-color: black;
+  color: white;
+}
+
+.redeye-container-awake {
+  background-color: #eee;
+  color: black;
+}
+
+.redeye-row {
+  height: 100%;
+}
+
+.redeye-back-button {
+  position: absolute;
+  margin: 20px;
+}
+
+.redeye-questions {
+  margin: 20px;
+}
+
+.redeye-question {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.redeye-second-title {
+  margin-top: 20px;
+}
