@@ -1,0 +1,20 @@
+.redeye-container {
+  height: 100vh;
+}
+
+.redeye-row {
+  height: 100%;
+}
+
+.redeye-back-button {
+  position: absolute;
+  margin: 20px;
+}
+
+.redeye-questions {
+  margin: 20px;
+}
+
+.redeye-question {
+  font-weight: bold;
+}

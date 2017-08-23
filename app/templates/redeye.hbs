@@ -1,0 +1,21 @@
+<a class="redeye-back-button" href {{action 'didClickBackButton'}}>Back To Profile</a>
+
+<div class="redeye-container container-fluid text-center">
+  <div class="redeye-row row align-items-center">
+    <div class="col">
+      <h1 class="redeye-title">Is Jon awake right now?</h1>
+
+      <p class="redeye-state">{{redeyeStateFormatted}}</p>
+    </div>
+  </div>
+</div>
+
+{{scroll-indicator}}
+
+<h1 class="text-center">Redeye</h1>
+
+<div class="redeye-questions">
+  {{#each questions as |question|}}
+    {{redeye-question question=question}}
+  {{/each}}
+</div>
