@@ -75,7 +75,7 @@ export default Ember.Controller.extend({
       }),
       RedeyeQuestion.create({
         question: 'When is this happening?',
-        answer: 'August 24 to September 1, 2017.'
+        answer: 'August 25 to September 1, 2017.'
       }),
       RedeyeQuestion.create({
         question: 'Why 28-hour cycles?',
