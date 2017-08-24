@@ -17,9 +17,10 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd nathanjang-github-io`
+* `git clone git@github.com:NathanJang/nathanjang.github.io.git` this repository
+* `cd nathanjang.github.io`
 * `npm install`
+* `./node_modules/bower/bin/bower install`
 
 ## Running / Development
 

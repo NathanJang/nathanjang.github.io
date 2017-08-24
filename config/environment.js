@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'nathanjang-github-io',
+    modulePrefix: 'jonathanchan.me',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
