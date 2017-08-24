@@ -37,8 +37,7 @@ export default Ember.Controller.extend({
     const currentDate = this.get('currentDate'), initialSleepDateMinusOneDay = this.get('initialSleepDateMinusOneDay');
     Ember.Logger.debug('Received dates', 'currentDate', currentDate, 'initialSleepDateMinusOneDay', initialSleepDateMinusOneDay);
     const difference = (currentDate.getTime() - initialSleepDateMinusOneDay.getTime()) / 1000; // in seconds
-    if (currentDate < initialSleepDateMinusOneDay || Math.ceil(difference / 60 / 60) <= this.get('hoursOfSleepPer28hrDay')) {
-      // if (Math.ceil((initialSleepDateMinusOneDay.getTime() - currentDate.getTime()) / 1000 / 60 / 60) <= (28 - this.get('hoursOfSleepPer28hrDay'))) { return 'awake'; }
+    if (currentDate < initialSleepDateMinusOneDay || Math.floor(difference / 60 / 60) < this.get('hoursOfSleepPer28hrDay')) {
       return 'waiting';
     }
 
@@ -61,9 +60,9 @@ export default Ember.Controller.extend({
       case 'waiting':
         return 'Hyped to start soon! 🔥';
       case 'awake':
-        return `Yep 👍, sleeping in ${Math.ceil(difference / 60) % 60 !== 0 ? 28 - currentHourOf28hrDay - 1 : 28 - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes`;
+        return `Yep 👍, sleeping in ${Math.ceil(difference / 60) % 60 !== 0 ? 28 - currentHourOf28hrDay - 1 : 28 - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes. It's been ${Math.floor(difference / 60 / 60 / 28)} day(s).`;
       case 'asleep':
-        return `Sleeping 💤, waking in ${Math.ceil(difference / 60) % 60 !== 0 ? this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay - 1 : this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes`;
+        return `Sleeping 💤, waking in ${Math.ceil(difference / 60) % 60 !== 0 ? this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay - 1 : this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes. It's been ${Math.floor(difference / 60 / 60 / 28)} day(s).`;
       case 'done':
         return 'Donezos ✅🔥';
     }
@@ -86,7 +85,7 @@ export default Ember.Controller.extend({
       }),
       RedeyeQuestion.create({
         question: 'But why?',
-        answer: 'This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷‍'
+        answer: Ember.String.htmlSafe('This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷. <a href="https://lmgtfy.com/?q=28+hour+day" target="_blank">Google it</a>.‍')
       })
     ]);
   }),
