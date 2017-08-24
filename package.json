@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "My personal website.",
   "license": "MIT",
-  "author": "",
+  "author": "Jonathan Chan <jonchanyc@outlook.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -44,5 +44,7 @@
     "node": ">= 4"
   },
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "~4.0.0-beta"
+  }
 }
