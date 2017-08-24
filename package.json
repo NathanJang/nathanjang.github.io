@@ -13,7 +13,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "CURRENT_BRANCH=\"$(git rev-parse --abbrev-ref HEAD)\"; git push origin \"$CURRENT_BRANCH\"; ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" --branch \"master\"; git push origin master; git checkout \"$CURRENT_BRANCH\""
+    "deploy": "bash ./bin/deploy.sh"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.6.0",
