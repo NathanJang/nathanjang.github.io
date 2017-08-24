@@ -4,6 +4,8 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
+  classNames: Ember.A(['experience-container']),
+
   projects: Ember.A([
     Project.create({
       title: 'MeowlWatch',

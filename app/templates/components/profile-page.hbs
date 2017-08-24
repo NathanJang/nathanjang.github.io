@@ -1,21 +1,17 @@
-<div class="profile-container containter-fluid">
-  <div class="profile-content row align-items-center">
-    <div class="col-3 col-md-4 col-lg-1" aria-hidden="true"></div>
-    <div class="col-6 col-md-4 col-lg-3 profile-cell" aria-hidden="true">
-      <img src="assets/profile-picture.jpg" alt="Profile Picture" class="profile-picture rounded-circle img-responsive center-block">
-    </div>
-    <div class="visible-3 visible-md-4" aria-hidden="true"></div>
+<div class="profile-content row align-items-center">
+  <div class="col-3 col-md-4 col-lg-1" aria-hidden="true"></div>
+  <div class="col-6 col-md-4 col-lg-3 profile-cell" aria-hidden="true">
+    <img src="assets/profile-picture.jpg" alt="Profile Picture" class="profile-picture rounded-circle img-responsive center-block">
+  </div>
+  <div class="visible-3 visible-md-4" aria-hidden="true"></div>
 
-    <div class="col-12 col-lg-8 profile-cell profile-text-cell">
-      <h1 class="profile-title">Jonathan Chan</h1>
-      <p class="profile-subtitle lead">Computer Science, Northwestern University &#8217;2020</p>
-      <ul class="profile-links">
-        {{#each profileLinks as |profileLink|}}
-          {{profile-link-button profileLink=profileLink tagName='li' classNames='profile-link-item'}}
-        {{/each}}
-      </ul>
-    </div>
+  <div class="col-12 col-lg-8 profile-cell profile-text-cell">
+    <h1 class="profile-title">Jonathan Chan</h1>
+    <p class="profile-subtitle lead">Computer Science, Northwestern University &#8217;2020</p>
+    <ul class="profile-links">
+      {{#each profileLinks as |profileLink|}}
+        {{profile-link-button profileLink=profileLink tagName='li' classNames='profile-link-item'}}
+      {{/each}}
+    </ul>
   </div>
 </div>
-
-{{scroll-indicator}}

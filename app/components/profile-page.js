@@ -4,6 +4,8 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
+  classNames: Ember.A(['profile-container', 'containter-fluid']),
+
   profileLinks: Ember.A([
     ProfileLink.create({
       url: links.github,
