@@ -2,11 +2,12 @@ CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 COMMIT_MESSAGE="Deploy gh-pages from commit $(git rev-parse HEAD)"
 #git push -q origin "$CURRENT_BRANCH"
 git checkout -q master &&
-git rm assets/* &&
+git rm -q assets/* &&
 git commit -qm "TEMP: Prune compiled assets" &&
 git checkout -q "$CURRENT_BRANCH" &&
 ember github-pages:commit --message "TEMP: $COMMIT_MESSAGE" --branch "master" &&
 # Squash them
+git checkout -q master &&
 git reset -q --soft "HEAD~2" &&
 git commit -qm "$COMMIT_MESSAGE" &&
 #git push -q origin master &&
