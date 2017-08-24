@@ -4,11 +4,12 @@ import RedeyeQuestion from '../util/redeye-question';
 export default Ember.Controller.extend({
 
   init() {
+    this._super(...arguments);
     this.setUpdateInterval();
   },
 
   willDestroy() {
-    this._super();
+    this._super(...arguments);
     clearInterval(this.get('timer'));
   },
 

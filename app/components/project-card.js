@@ -22,6 +22,7 @@ export default Ember.Component.extend({
   }),
 
   click(event) {
+    this._super(...arguments);
     if (!this.get('href')) {
       event.preventDefault();
       this.get('project.action')();
