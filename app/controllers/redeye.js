@@ -20,13 +20,13 @@ export default Ember.Controller.extend({
     setInterval(() => this.setDate(), 60 * 1000);
   },
 
-  // The date when we first go to sleep
-  initialSleepDate: new Date('2017-08-25T12:00:00'), // UTC
+  // The date when we first go to sleep, minus one day for waiting period
+  initialSleepDateMinusOneDay: new Date('2017-08-24T08:00:00'), // UTC
 
   hoursOfSleepPer28hrDay: 9,
 
-  // The total duration of this trial in hours (1 week)
-  numberOfHoursOfRedEye: 1 * 6 * 28,
+  // The total duration of this trial in hours (1 week plus one day waiting)
+  numberOfHoursOfRedEye: 1 * 7 * 28,
 
   // One of the following:
   //  - waiting
@@ -34,11 +34,14 @@ export default Ember.Controller.extend({
   //  - asleep
   //  - done
   redeyeState: Ember.computed('currentDate', function () {
-    const currentDate = this.get('currentDate'), initialSleepDate = this.get('initialSleepDate');
-    Ember.Logger.debug('Received dates', 'currentDate', currentDate, 'initialSleepDate', initialSleepDate);
-    if (currentDate < initialSleepDate) { return 'waiting'; }
+    const currentDate = this.get('currentDate'), initialSleepDateMinusOneDay = this.get('initialSleepDateMinusOneDay');
+    Ember.Logger.debug('Received dates', 'currentDate', currentDate, 'initialSleepDateMinusOneDay', initialSleepDateMinusOneDay);
+    const difference = (currentDate.getTime() - initialSleepDateMinusOneDay.getTime()) / 1000; // in seconds
+    if (currentDate < initialSleepDateMinusOneDay || Math.ceil(difference / 60 / 60) <= this.get('hoursOfSleepPer28hrDay')) {
+      // if (Math.ceil((initialSleepDateMinusOneDay.getTime() - currentDate.getTime()) / 1000 / 60 / 60) <= (28 - this.get('hoursOfSleepPer28hrDay'))) { return 'awake'; }
+      return 'waiting';
+    }
 
-    const difference = (currentDate.getTime() - initialSleepDate.getTime()) / 1000; // in seconds
     if (difference > this.get('numberOfHoursOfRedEye') * 60 * 60) { return 'done'; }
 
     const currentHourOf28hrDay = (difference / 60 / 60) % 28;
@@ -48,9 +51,9 @@ export default Ember.Controller.extend({
   }),
 
   redeyeStateFormatted: Ember.computed('currentDate', function () {
-    const currentDate = this.get('currentDate'), initialSleepDate = this.get('initialSleepDate');
+    const currentDate = this.get('currentDate'), initialSleepDateMinusOneDay = this.get('initialSleepDateMinusOneDay');
 
-    const difference = (currentDate.getTime() - initialSleepDate.getTime()) / 1000; // in seconds
+    const difference = (currentDate.getTime() - initialSleepDateMinusOneDay.getTime()) / 1000; // in seconds
     const currentHourOf28hrDay = Math.floor(difference / 60 / 60) % 28;
     Ember.Logger.debug('currentHourOf28hrDay', currentHourOf28hrDay);
 
