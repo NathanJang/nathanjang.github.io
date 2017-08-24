@@ -7,7 +7,13 @@ export default Ember.Controller.extend({
     this.setUpdateInterval();
   },
 
+  willDestroy() {
+    this._super();
+    clearInterval(this.get('timer'));
+  },
+
   currentDate: null,
+  timer: null,
 
   setDate() {
     Ember.Logger.debug('setDate called');
@@ -17,7 +23,7 @@ export default Ember.Controller.extend({
   setUpdateInterval() {
     Ember.Logger.debug('setUpdateInterval called');
     this.setDate()
-    setInterval(() => this.setDate(), 60 * 1000);
+    this.set('timer', setInterval(() => this.setDate(), 60 * 1000));
   },
 
   // The date when we first go to sleep, minus one day for waiting period
