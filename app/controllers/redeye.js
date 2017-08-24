@@ -28,7 +28,7 @@ export default Ember.Controller.extend({
   },
 
   // The date when we first go to sleep, minus one day for waiting period
-  initialSleepDateMinusOneDay: new Date('2017-08-24T08:00:00'), // UTC
+  initialSleepDateMinusOneDay: new Date(Date.UTC(2017, 7, 24, 8)), // 2018-08-24T08:00Z (UTC)
 
   hoursOfSleepPer28hrDay: 9,
 
