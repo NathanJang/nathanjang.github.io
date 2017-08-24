@@ -7,5 +7,6 @@ export default Ember.Object.extend({
   shouldMaskIcon: false,
   iconAltText: '',
   linkTitleText: '',
-  href: ''
+  href: '',
+  action: ''
 });

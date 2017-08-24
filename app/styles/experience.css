@@ -42,7 +42,7 @@
   transition:0.15s;
 }
 
-.project-card-cell > a:hover {
+.project-card-cell:hover {
   text-decoration: none;
 }
 
