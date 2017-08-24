@@ -71,7 +71,7 @@ export default Ember.Controller.extend({
     return Ember.A([
       RedeyeQuestion.create({
         question: 'What is this?',
-        answer: `I'm doing an experiement. Instead of going through a seven-day week as usual, this week will have six 28-hour cycles for me. Each cycle, I will sleep for ${hoursOfSleepPer28hrDay} hours, and be awake for ${28 - hoursOfSleepPer28hrDay}. You can check if I'm awake up there 👆`
+        answer: `I'm doing an experiment. Instead of going through a seven-day week as usual, this week will have six 28-hour cycles for me. Each cycle, I will sleep for ${hoursOfSleepPer28hrDay} hours, and be awake for ${28 - hoursOfSleepPer28hrDay}. You can check if I'm awake up there 👆`
       }),
       RedeyeQuestion.create({
         question: 'When is this happening?',
