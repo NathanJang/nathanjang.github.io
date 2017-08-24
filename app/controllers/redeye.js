@@ -92,7 +92,11 @@ export default Ember.Controller.extend({
       }),
       RedeyeQuestion.create({
         question: 'But why?',
-        answer: Ember.String.htmlSafe('This will give me many more waking hours per week than a normal seven-day week. It\'ll just be a week, so might as well try it 🤷. <a href="https://lmgtfy.com/?q=28+hour+day" target="_blank">Google it</a>.‍')
+        answer: Ember.String.htmlSafe('This will give me many more waking hours per week than a normal seven-day week. Since I\'m mainly working at home, maybe it\'ll make me more productive. It\'ll just be a week, so might as well try it 🤷. <a href="https://lmgtfy.com/?q=28+hour+day" target="_blank">Google it?</a>')
+      }),
+      RedeyeQuestion.create({
+        question: 'Why the website?',
+        answer: 'I need a clock that\'s based on 28-hour days lmao.'
       })
     ]);
   }),
