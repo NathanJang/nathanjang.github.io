@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     didTransition() {
-      document.title = 'Redeye — Jonathan Chan'
+      document.title = 'Jonathan Chan'
     }
   }
 });

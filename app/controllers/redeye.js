@@ -74,15 +74,15 @@ export default Ember.Controller.extend({
     return Ember.A([
       RedeyeQuestion.create({
         question: 'What is this?',
-        answer: `I'm doing an experiment. Instead of going through a seven-day week as usual, this week will have six 28-hour cycles for me. Each cycle, I will sleep for ${hoursOfSleepPer28hrDay} hours, and be awake for ${28 - hoursOfSleepPer28hrDay}. You can check if I'm awake up there 👆`
+        answer: `I'm doing an experiment. Instead of going through a seven-day week as usual, this week will have six 28-hour cycles for me. Each cycle, I will sleep for ${hoursOfSleepPer28hrDay} hours, and be awake for ${28 - hoursOfSleepPer28hrDay}. You can check if I'm awake up there 👆. Check back later if you're curious!`
       }),
       RedeyeQuestion.create({
         question: 'When is this happening?',
-        answer: 'August 25 to September 1, 2017.'
+        answer: 'August 25 to September 1, 2017, China time.'
       }),
       RedeyeQuestion.create({
         question: 'Why 28-hour cycles?',
-        answer: '28 times 6 happens to be 24 times 7.'
+        answer: '28 times 6 happens to be 24 times 7, so my schedule will sync up with the world after exactly a week.'
       }),
       RedeyeQuestion.create({
         question: 'But why?',
