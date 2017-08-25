@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 COMMIT_MESSAGE="Deploy gh-pages from commit $(git rev-parse HEAD)"
 git push -q origin "$CURRENT_BRANCH"
