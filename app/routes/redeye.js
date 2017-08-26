@@ -28,7 +28,7 @@ export default Ember.Route.extend(ScrollToTop, {
   setUpdateInterval() {
     Ember.Logger.debug('setUpdateInterval called');
     this.setControllerDate()
-    this.set('timer', setInterval(() => this.setControllerDate(), 60 * 1000));
+    this.set('timer', setInterval(() => this.setControllerDate(), 30 * 1000));
   },
 
   clearUpdateInterval() {
