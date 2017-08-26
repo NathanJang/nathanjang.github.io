@@ -3,28 +3,11 @@ import RedeyeQuestion from '../util/redeye-question';
 
 export default Ember.Controller.extend({
 
-  init() {
-    this._super(...arguments);
-    this.setUpdateInterval();
-  },
-
-  willDestroy() {
-    this._super(...arguments);
-    clearInterval(this.get('timer'));
-  },
-
   currentDate: null,
-  timer: null,
 
   setDate() {
     Ember.Logger.debug('setDate called');
     this.set('currentDate', new Date());
-  },
-
-  setUpdateInterval() {
-    Ember.Logger.debug('setUpdateInterval called');
-    this.setDate()
-    this.set('timer', setInterval(() => this.setDate(), 60 * 1000));
   },
 
   // The date when we first go to sleep, minus one day for waiting period
