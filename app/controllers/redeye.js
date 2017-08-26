@@ -87,12 +87,6 @@ export default Ember.Controller.extend({
   containerClassNames: Ember.computed('redeyeState', function () {
     if (this.get('redeyeState') === 'asleep') { return 'redeye-container-asleep'; }
     return 'redeye-container-awake';
-  }),
-
-  actions: {
-    didClickBackButton() {
-      this.transitionToRoute('index');
-    }
-  }
+  })
 
 });
