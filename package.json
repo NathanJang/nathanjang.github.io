@@ -13,7 +13,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "./bin/deploy.sh"
+    "deploy": "./bin/deploy"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.6.0",
