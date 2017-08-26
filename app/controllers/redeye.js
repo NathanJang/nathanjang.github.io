@@ -50,12 +50,42 @@ export default Ember.Controller.extend({
       case 'waiting':
         return 'Hyped to start soon! 🔥';
       case 'awake':
-        return `Yep 👍, sleeping in ${Math.ceil(difference / 60) % 60 !== 0 ? 28 - currentHourOf28hrDay - 1 : 28 - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes. It's been ${Math.floor(difference / 60 / 60 / 28)} day(s).`;
+        return `Yep 👍, sleeping in ${this.get('countdownText')}`;
       case 'asleep':
-        return `Sleeping 💤, waking in ${Math.ceil(difference / 60) % 60 !== 0 ? this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay - 1 : this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay} hours ${(difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60} minutes. It's been ${Math.floor(difference / 60 / 60 / 28)} day(s).`;
+        return `Sleeping 💤, waking in ${this.get('countdownText')}`;
       case 'done':
         return 'Donezos ✅🔥';
     }
+  }),
+
+  countdownText: Ember.computed('currentDate', function () {
+    const currentDate = this.get('currentDate'), initialSleepDateMinusOneDay = this.get('initialSleepDateMinusOneDay');
+
+    const difference = (currentDate.getTime() - initialSleepDateMinusOneDay.getTime()) / 1000; // in seconds
+    const currentHourOf28hrDay = Math.floor(difference / 60 / 60) % 28;
+    const days = Math.floor(difference / 60 / 60 / 28);
+    let hours, minutes;
+
+    function formattedText({ hours, minutes, localTime }) {
+      return `${hours} hours ${minutes} minutes (${localTime} local time). It's been ${days} days.`;
+    }
+
+    switch (this.get('redeyeState')) {
+      case 'awake':
+        hours = Math.ceil(difference / 60) % 60 !== 0 ? 28 - currentHourOf28hrDay - 1 : 28 - currentHourOf28hrDay;
+        minutes = (difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60;
+        break;
+      case 'asleep':
+        hours = Math.ceil(difference / 60) % 60 !== 0 ? this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay - 1 : this.get('hoursOfSleepPer28hrDay') - currentHourOf28hrDay;
+        minutes = (difference / 60) % 60 === 0 ? 0 : 60 - Math.ceil(difference / 60) % 60;
+        break;
+      default:
+        return '';
+    }
+
+    const localTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours() + hours, currentDate.getMinutes() + minutes + 1).toLocaleTimeString('en-US');
+
+    return formattedText({ hours, minutes, localTime });
   }),
 
   questions: Ember.computed('hoursOfSleepPer28hrDay', function () {
