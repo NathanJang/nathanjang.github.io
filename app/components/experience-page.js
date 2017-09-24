@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     return Ember.A([
       Project.create({
         title: 'MeowlWatch',
-        description: 'An iOS app to help Northwestern Students get the most out of their meal plan. In talks with Northwestern Dining to make it even better.',
+        description: 'An iOS app to help Northwestern Students get the most out of their meal plan. Created as personal-use app and became popular among Northwestern students. 3,000 downloads.',
         iconPath: 'assets/meowlwatch-logo.png',
         shouldMaskIcon: true,
         iconAltText: 'MeowlWatch Logo',
@@ -19,11 +19,11 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: '.dev',
-        description: 'Software Development Director and Co-Founder. A new club at Northwestern for devs to connect and make cool stuff. Website coming soon.',
+        description: Ember.String.htmlSafe('Co-Founder and Software Development Director.<br />A new club at Northwestern for devs and non-devs to connect and work on innovative projects collaboratively.'),
         iconPath: 'assets/dotdev-icon.png',
         shouldMaskIcon: true,
         iconAltText: '.dev Logo',
-        linkTitleText: 'See the .dev organization profile on Wildcat Connection.',
+        linkTitleText: 'See our club website.',
         href: links.dotDev
       }),
       Project.create({
