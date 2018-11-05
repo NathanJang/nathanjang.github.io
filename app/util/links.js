@@ -7,6 +7,7 @@ export default {
   fulcrumLabs: 'https://startup.fulcrumgt.com',
   fulcrumgt: 'https://fulcrumgt.com',
   meowlwatch: 'https://itunes.apple.com/us/app/meowlwatch-for-northwestern-university-dining/id1219875692?mt=8',
+  meowlwatchSource: 'https://github.com/NathanJang/MeowlWatch',
   dotDev: 'https://www.dotdev.club',
   wildhacks: 'http://wildhacks.org',
   eecs111StudyGuide: 'https://github.com/NathanJang/EECS111-2017SQ-Study-Guide',

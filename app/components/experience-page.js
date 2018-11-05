@@ -18,7 +18,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'MeowlWatch',
-        description: 'An iOS app to help Northwestern Students get the most out of their meal plan. Created as personal-use app/personal project and became popular among Northwestern students. 3,000 downloads.',
+        description: Ember.String.htmlSafe(`An iOS app to help Northwestern Students get the most out of their meal plan. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. <a href="${links.meowlwatchSource}" target="_blank">Source Code</a>`),
         iconPath: '/assets/meowlwatch-logo.png',
         shouldMaskIcon: true,
         iconAltText: 'MeowlWatch Logo',
