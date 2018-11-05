@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     return Ember.A([
       Project.create({
         title: 'Divisi',
-        description: Ember.String.htmlSafe(`Internship project for Summer 2018 at Fulcrum Labs, with <a href="${links.fulcrumgt}">Fulcrum GT</a>. Ideated and designed an iOS app and web platform to help travelling groups to split bills, using Core Data, React, and Socket.IO, in a fast-paced startup team.`),
+        description: Ember.String.htmlSafe(`Ideated and designed an iOS and web platform to help travelling groups to split bills, using Core Data, React, and Socket.IO, in a fast-paced startup team. Internship project for Summer 2018 at Fulcrum Labs, with <a href="${links.fulcrumgt}">Fulcrum GT</a>.`),
         iconPath: '/assets/divisi-logo.png',
         shouldMaskIcon: false,
         iconAltText: 'Divisi Logo',
