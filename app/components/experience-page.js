@@ -44,7 +44,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'Undergrad Teaching Assistant',
-        description: Ember.String.htmlSafe(`Fundamentals of Computer Programming in <a href="${links.racket}" target="_blank">Racket</a> since March 2017.`),
+        description: Ember.String.htmlSafe(`Data Structures and Algorithms, and Fundamentals of Computer Programming in <a href="${links.racket}" target="_blank">Racket</a> since March 2017.`),
         iconPath: '/assets/racket-logo.svg',
         iconAltText: 'Racket',
         linkTitleText: 'See a study guide that I wrote.',
@@ -57,15 +57,6 @@ export default Ember.Component.extend({
         iconAltText: 'Ember JS',
         linkTitleText: 'See this website\'s source code.',
         href: links.thisSiteSource
-      }),
-      Project.create({
-        title: 'Is Jon awake?',
-        description: 'Click to find out.',
-        iconPath: '/assets/clock-icon.svg',
-        iconAltText: 'Clock',
-        action: function () {
-          Ember.getOwner(this).lookup('router:main').transitionTo('redeye');
-        }.bind(this)
       }),
       Project.create({
         title: 'And More To Come.',
