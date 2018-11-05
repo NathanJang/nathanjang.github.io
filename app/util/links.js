@@ -4,6 +4,8 @@ export default {
   linkedin: 'https://linkedin.com/in/jonathanchanyc',
   appStore: 'https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691',
 
+  fulcrumLabs: 'https://startup.fulcrumgt.com',
+  fulcrumgt: 'https://fulcrumgt.com',
   meowlwatch: 'https://itunes.apple.com/us/app/meowlwatch-for-northwestern-university-dining/id1219875692?mt=8',
   dotDev: 'https://www.dotdev.club',
   wildhacks: 'http://wildhacks.org',

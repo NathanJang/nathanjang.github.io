@@ -9,6 +9,14 @@ export default Ember.Component.extend({
   projects: Ember.computed(function () {
     return Ember.A([
       Project.create({
+        title: 'Divisi',
+        description: Ember.String.htmlSafe(`Internship project for Summer 2018 at Fulcrum Labs, with <a href="${links.fulcrumgt}">Fulcrum GT</a>. Ideated and designed an iOS app and web platform to help travelling groups to split bills, using Core Data, React, and Socket.IO, in a fast-paced startup team.`),
+        iconPath: '/assets/divisi-logo.png',
+        shouldMaskIcon: false,
+        iconAltText: 'Divisi Logo',
+        href: links.fulcrumLabs
+      }),
+      Project.create({
         title: 'MeowlWatch',
         description: 'An iOS app to help Northwestern Students get the most out of their meal plan. Created as personal-use app/personal project and became popular among Northwestern students. 3,000 downloads.',
         iconPath: '/assets/meowlwatch-logo.png',
