@@ -41,6 +41,13 @@ export default Ember.Component.extend({
       icon: '/assets/app-store-icon.png',
       altText: 'App Store Icon',
       username: 'Jonathan Chan'
+    }),
+    ProfileLink.create({
+      url: links.resume,
+      ariaLabel: 'Resume',
+      icon: '/assets/resume-icon.svg',
+      altText: 'Resume Icon',
+      username: 'Résumé'
     })
   ])
 

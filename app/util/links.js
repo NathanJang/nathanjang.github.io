@@ -3,6 +3,7 @@ export default {
   github: 'https://github.com/NathanJang',
   linkedin: 'https://linkedin.com/in/jonathanchanyc',
   appStore: 'https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691',
+  resume: '/JonathanChan.pdf',
 
   fulcrumLabs: 'https://startup.fulcrumgt.com',
   fulcrumgt: 'https://fulcrumgt.com',
