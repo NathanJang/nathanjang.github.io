@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     return Ember.A([
       Project.create({
         title: 'Divisi',
-        caption: Ember.String.htmlSafe(`Summer 2018 Internship Project with <a href="${links.fulcrumgt}">Fulcrum GT</a>`),
+        caption: Ember.String.htmlSafe(`Summer 2018 Internship Project with <a href="${links.fulcrumgt}" target="_blank">Fulcrum GT</a>`),
         description: 'Ideated and designed an iOS and web platform to help travelling groups to split bills, using Core Data, React, and Socket.IO, in a fast-paced startup team.',
         iconPath: '/assets/divisi-logo.png',
         shouldMaskIcon: false,
@@ -47,8 +47,17 @@ export default Ember.Component.extend({
         href: links.eecs111StudyGuide
       }),
       Project.create({
+        title: 'Cooking',
+        caption: 'I live for food.',
+        description: 'My goal is to make the perfect bowl of Japanese ramen from scratch. Check out my cooking Instagram!',
+        iconPath: '/assets/cooking.svg',
+        iconAltText: 'Cooking',
+        linkTitleText: 'See my cooking Instagram.',
+        href: links.palatablePuns
+      }),
+      Project.create({
         title: 'This Website!',
-        description: Ember.String.htmlSafe(`Built with <a href="${links.ember}" target="_blank">Ember</a>. It&#8217;s also responsive!`),
+        description: Ember.String.htmlSafe(`Built with <a href="${links.ember}" target="_blank">EmberJS</a>.`),
         iconPath: '/assets/ember-logo.png',
         iconAltText: 'Ember JS',
         linkTitleText: 'See this website\'s source code.',

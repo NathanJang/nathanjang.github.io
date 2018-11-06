@@ -11,6 +11,7 @@ export default {
   dotDev: 'https://www.facebook.com/NUDotDev/',
   wildhacks: 'http://wildhacks.org',
   eecs111StudyGuide: 'https://github.com/NathanJang/EECS111-2017SQ-Study-Guide',
+  palatablePuns: 'https://www.instagram.com/palatable_puns/',
   thisSiteSource: 'https://github.com/NathanJang/nathanjang.github.io',
 
   epic: 'https://nuisepic.com',
