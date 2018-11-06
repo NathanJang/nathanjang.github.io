@@ -10,8 +10,8 @@ export default Ember.Component.extend({
     return Ember.A([
       Project.create({
         title: 'Divisi',
-        caption: Ember.String.htmlSafe(`Summer 2018 Internship Project with <a href="${links.fulcrumgt}" target="_blank">Fulcrum GT</a>`),
-        description: 'Ideated and designed an iOS and web platform to help travelling groups to split bills, using Core Data, React, and Socket.IO, in a fast-paced startup team.',
+        caption: Ember.String.htmlSafe(`Summer 2018 Internship Project with ${rawLink(links.fulcrumgt, 'Fulcrum GT')}`),
+        description: Ember.String.htmlSafe(`Ideated and designed an iOS and web platform to help travelling groups to split bills, using ${rawLink(links.coreData, 'Core Data')}, ${rawLink(links.react, 'React')}, and ${rawLink(links.socketIo, 'Socket.IO')}, in a fast-paced startup team.`),
         iconPath: '/assets/divisi-logo.png',
         shouldMaskIcon: false,
         iconAltText: 'Divisi Logo',
@@ -20,7 +20,7 @@ export default Ember.Component.extend({
       Project.create({
         title: 'MeowlWatch',
         caption: 'Independent iOS App',
-        description: Ember.String.htmlSafe(`Designed and launched an app for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. <a href="${links.meowlwatchSource}" target="_blank">Source Code</a>`),
+        description: Ember.String.htmlSafe(`Designed and launched an app for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. ${rawLink(links.meowlwatchSource, 'Source Code')}`),
         iconPath: '/assets/meowlwatch-logo.png',
         shouldMaskIcon: true,
         iconAltText: 'MeowlWatch Logo',
@@ -40,7 +40,7 @@ export default Ember.Component.extend({
       Project.create({
         title: 'Undergrad Teaching Assistant',
         caption: 'Data Structures and Algorithms',
-        description: Ember.String.htmlSafe(`Previously, Fundamentals of Computer Programming in <a href="${links.racket}" target="_blank">Racket</a> since March 2017. Focused on tangible analogies that helped students to achieve above-average A grades. Empowered students to learn independently by composing a comprehensive study guide, to help students thrive beyond office hours.`),
+        description: Ember.String.htmlSafe(`Previously, Fundamentals of Computer Programming in ${rawLink(links.racket, 'Racket')} since March 2017. Focused on tangible analogies that helped students to achieve above-average A grades. Empowered students to learn independently by composing a comprehensive study guide, to help students thrive beyond office hours.`),
         iconPath: '/assets/racket-logo.svg',
         iconAltText: 'Racket',
         linkTitleText: 'See a study guide that I wrote.',
@@ -57,7 +57,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'This Website!',
-        description: Ember.String.htmlSafe(`Built with <a href="${links.ember}" target="_blank">EmberJS</a>.`),
+        description: Ember.String.htmlSafe(`Built with ${rawLink(links.ember, 'Ember.js')}.`),
         iconPath: '/assets/ember-logo.png',
         iconAltText: 'Ember JS',
         linkTitleText: 'See this website\'s source code.',
@@ -75,3 +75,7 @@ export default Ember.Component.extend({
   })
 
 });
+
+function rawLink(href, content) {
+  return `<a href="${href}" target="_blank">${content}</a>`;
+}

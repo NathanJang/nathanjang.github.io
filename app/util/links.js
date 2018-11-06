@@ -6,6 +6,9 @@ export default {
 
   fulcrumLabs: 'https://startup.fulcrumgt.com',
   fulcrumgt: 'https://fulcrumgt.com',
+  coreData: 'https://developer.apple.com/documentation/coredata',
+  react: 'https://reactjs.org',
+  socketIo: 'https://socket.io',
   meowlwatch: 'https://itunes.apple.com/us/app/meowlwatch-for-northwestern-university-dining/id1219875692?mt=8',
   meowlwatchSource: 'https://github.com/NathanJang/MeowlWatch',
   dotDev: 'https://www.facebook.com/NUDotDev/',
