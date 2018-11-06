@@ -74,3 +74,8 @@
 .project-card-icon-masked {
   border-radius: 20%;
 }
+
+.footer-description {
+  color: #eaeaea;
+  font-size: .7em;
+}
