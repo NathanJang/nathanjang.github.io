@@ -39,7 +39,8 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'Undergrad Teaching Assistant',
-        description: Ember.String.htmlSafe(`Data Structures and Algorithms, and Fundamentals of Computer Programming in <a href="${links.racket}" target="_blank">Racket</a> since March 2017.`),
+        caption: 'Data Structures and Algorithms',
+        description: Ember.String.htmlSafe(`Previously, Fundamentals of Computer Programming in <a href="${links.racket}" target="_blank">Racket</a> since March 2017. Focused on tangible analogies that helped students to achieve above-average A grades. Empowered students to learn independently by composing a comprehensive study guide, to help students thrive beyond office hours.`),
         iconPath: '/assets/racket-logo.svg',
         iconAltText: 'Racket',
         linkTitleText: 'See a study guide that I wrote.',
