@@ -29,7 +29,7 @@ export default Ember.Component.extend({
         title: '.dev',
         description: Ember.String.htmlSafe('Co-Founder and Software Development Director.<br />A new student organization at Northwestern for devs and non-devs to connect and work on innovative projects collaboratively.'),
         iconPath: '/assets/dotdev-icon.png',
-        shouldMaskIcon: true,
+        shouldMaskIcon: false,
         iconAltText: '.dev Logo',
         linkTitleText: 'See our club website.',
         href: links.dotDev
