@@ -65,6 +65,11 @@
   margin-top: -4px;
 }
 
+.profile-link-button:hover .profile-icon {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
 .profile-link-item {
   margin-bottom: 5px;
   list-style-type: none;
