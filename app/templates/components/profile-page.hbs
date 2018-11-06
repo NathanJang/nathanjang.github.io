@@ -1,7 +1,7 @@
 <div class="profile-content row align-items-center">
   <div class="col-3 col-md-4 col-lg-1" aria-hidden="true"></div>
-  <div class="col-6 col-md-4 col-lg-3 profile-cell" aria-hidden="true">
-    <img src="/assets/profile-picture.jpg" alt="Profile Picture" class="profile-picture rounded-circle img-responsive center-block">
+  <div class="col-6 col-md-4 col-lg-3 profile-cell" aria-hidden="true" onclick={{action 'handleProfilePictureClick'}}>
+    <img src={{currentProfilePictureSrc}} alt="Profile Picture" class="profile-picture rounded-circle img-responsive center-block">
   </div>
   <div class="visible-3 visible-md-4" aria-hidden="true"></div>
 

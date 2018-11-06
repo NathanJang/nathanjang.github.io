@@ -4,6 +4,20 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
+  profilePictureSrcs: Ember.A(['/assets/profile-picture.jpg', '/assets/profile-picture-secondary.jpg']),
+
+  currentProfilePictureIndex: 0,
+
+  currentProfilePictureSrc: Ember.computed('currentProfilePictureIndex', function () {
+    return this.get('profilePictureSrcs')[this.get('currentProfilePictureIndex')]
+  }),
+
+  actions: {
+    handleProfilePictureClick() {
+      this.set('currentProfilePictureIndex', (this.get('currentProfilePictureIndex') + 1) % this.get('profilePictureSrcs.length'))
+    }
+  },
+
   classNames: Ember.A(['profile-container', 'containter-fluid']),
 
   profileLinks: Ember.A([

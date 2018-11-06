@@ -46,6 +46,7 @@
 
 .profile-picture {
   width: 100%;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) { /* >= lg */
