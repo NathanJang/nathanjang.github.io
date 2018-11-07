@@ -24,4 +24,4 @@ before_install:
 script:
   - npm run lint:hbs
   - npm run lint:js
-  - npm test
+  - npm build-prod
