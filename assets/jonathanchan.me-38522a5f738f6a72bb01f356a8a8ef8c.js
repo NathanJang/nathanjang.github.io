@@ -77,4 +77,4 @@ var t=Ember.Object.extend({url:"",ariaLabel:"",icon:"",altText:"",username:""})
 e.default=t}),define("jonathanchan.me/util/project",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Ember.Object.extend({title:"",caption:null,description:"",iconPath:"",shouldMaskIcon:!1,iconAltText:"",linkTitleText:"",href:"",action:""})
 e.default=t}),define("jonathanchan.me/config/environment",[],function(){try{var e="jonathanchan.me/config/environment",t=document.querySelector('meta[name="'+e+'"]').getAttribute("content"),n={default:JSON.parse(unescape(t))}
-return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(a){throw new Error('Could not read config from meta tag with name "'+e+'".')}}),runningTests||require("jonathanchan.me/app").default.create({name:"jonathanchan.me",version:"2018.11.06+3f4b95ac"})
+return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(a){throw new Error('Could not read config from meta tag with name "'+e+'".')}}),runningTests||require("jonathanchan.me/app").default.create({name:"jonathanchan.me",version:"2018.11.06+d1ad4451"})
