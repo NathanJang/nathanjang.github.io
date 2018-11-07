@@ -22,6 +22,13 @@ export default Ember.Component.extend({
 
   profileLinks: Ember.A([
     ProfileLink.create({
+      url: links.resume,
+      ariaLabel: 'Resume',
+      icon: '/assets/resume-icon.svg',
+      altText: 'Resume Icon',
+      username: 'Resume'
+    }),
+    ProfileLink.create({
       url: links.github,
       ariaLabel: 'GitHub Profile',
       icon: '/assets/github-icon.png',
@@ -41,13 +48,6 @@ export default Ember.Component.extend({
       icon: '/assets/app-store-icon.png',
       altText: 'App Store Icon',
       username: 'Jonathan Chan'
-    }),
-    ProfileLink.create({
-      url: links.resume,
-      ariaLabel: 'Resume',
-      icon: '/assets/resume-icon.svg',
-      altText: 'Resume Icon',
-      username: 'Résumé'
     })
   ])
 
