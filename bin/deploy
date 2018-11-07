@@ -4,7 +4,7 @@ CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 COMMIT_MESSAGE="Deploy gh-pages from commit $(git rev-parse HEAD)"
 git push -q origin "$CURRENT_BRANCH"
 git checkout -q master &&
-git rm -qr "$(ls | grep -v .gitignore)" &&
+git rm -qr $(ls | grep -v .gitignore) &&
 git commit -qm "TEMP: Prune" &&
 git checkout -q "$CURRENT_BRANCH" &&
 ember github-pages:commit --message "TEMP: $COMMIT_MESSAGE" --branch "master" > /dev/null &&
