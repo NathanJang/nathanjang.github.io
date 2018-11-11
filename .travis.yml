@@ -44,8 +44,8 @@ deploy:
 
 after_deploy:
   - >
-    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/e1565713311dd2944a94ba3d6b8da0b5Copy/settings/development_mode"
-    -H "X-Auth-Email: jonchanyc@outlook.com"
+    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/e1565713311dd2944a94ba3d6b8da0b5/settings/development_mode"
+    -H "X-Auth-Email: $CLOUDFLARE_EMAIL"
     -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
     -H "Content-Type: application/json"
-    --data '{"value":"off"}'
+    --data '{"value":"on"}'
