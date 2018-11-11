@@ -17,6 +17,7 @@ export default {
   eecs111StudyGuide: 'https://github.com/NathanJang/EECS111-2017SQ-Study-Guide',
   palatablePuns: 'https://www.instagram.com/palatable_puns/',
   thisSiteSource: 'https://github.com/NathanJang/nathanjang.github.io',
+  thisSiteTravisBadge: 'https://travis-ci.com/NathanJang/nathanjang.github.io.svg?branch=ember',
 
   epic: 'https://nuisepic.com',
   racket: 'https://racket-lang.org',

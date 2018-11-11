@@ -1,8 +1,10 @@
 [url]: https://jonathanchan.me
 
-# [jonathanchan.me][url]
+# [jonathanchan.me][url] [![](https://travis-ci.com/NathanJang/nathanjang.github.io.svg?branch=ember)](https://travis-ci.com/NathanJang/nathanjang.github.io)
 
 This is the source code to my [personal website][url].
+
+The site is continuously deployed to GitHub Pages with Travis.
 
 To develop locally:
 

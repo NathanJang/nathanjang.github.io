@@ -57,6 +57,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'This Website!',
+        caption: Ember.String.htmlSafe(`${rawLink('https://travis-ci.com/NathanJang/nathanjang.github.io', `<img src="${links.thisSiteTravisBadge}" />`)}`),
         description: Ember.String.htmlSafe(`Built with ${rawLink(links.ember, 'Ember.js')}.`),
         iconPath: '/assets/ember-logo.png',
         iconAltText: 'Ember JS',
