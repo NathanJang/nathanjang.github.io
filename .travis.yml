@@ -38,6 +38,8 @@ deploy:
     keep-history: true
     target-branch: master
     local-dir: dist
+    on:
+      branch: ember
 
 
 after_deploy:
