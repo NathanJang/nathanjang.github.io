@@ -3,6 +3,10 @@ language: node_js
 node_js:
   - "6"
 
+branches:
+  only:
+    - ember
+
 sudo: false
 dist: trusty
 
@@ -34,5 +38,11 @@ deploy:
     keep-history: true
     target-branch: master
     local-dir: dist
-    on:
-      branch: ember
+
+
+after_deploy:
+  - curl -X PATCH "https://api.cloudflare.com/client/v4/zones/e1565713311dd2944a94ba3d6b8da0b5Copy/settings/development_mode"
+     -H "X-Auth-Email: jonchanyc@outlook.com"
+     -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
+     -H "Content-Type: application/json"
+     --data '{"value":"off"}'
