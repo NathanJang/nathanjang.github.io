@@ -47,7 +47,7 @@
     "qunit-dom": "^0.8.0"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 10"
   },
   "private": true,
   "dependencies": {
