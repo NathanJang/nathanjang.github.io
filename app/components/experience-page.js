@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       Project.create({
         title: 'Convoy',
         caption: 'Summer 2019 Software Engineering Intern',
-        description: Ember.String.htmlSafe('Designed and launched a full-stack automation workflow for shipment operations team to better manage staffing.<br />Freed up 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.'),
+        description: Ember.String.htmlSafe('Designed and launched a new automation workflow for shipment operations team to better manage staff allocation.<br />Saved 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.'),
         iconPath: '/assets/convoy-logo.svg',
         shouldMaskIcon: false,
         iconAltText: 'Convoy Logo',
