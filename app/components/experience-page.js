@@ -9,6 +9,15 @@ export default Ember.Component.extend({
   projects: Ember.computed(function () {
     return Ember.A([
       Project.create({
+        title: 'Convoy',
+        caption: 'Summer 2019 Software Engineering Intern',
+        description: Ember.String.htmlSafe('Designed and launched a full-stack automation workflow for shipment operations team to better manage staffing.<br />Freed up 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.'),
+        iconPath: '/assets/convoy-logo.svg',
+        shouldMaskIcon: false,
+        iconAltText: 'Convoy Logo',
+        href: links.convoy
+      }),
+      Project.create({
         title: 'Divisi',
         caption: Ember.String.htmlSafe(`Summer 2018 Internship Project with ${rawLink(links.fulcrumgt, 'Fulcrum GT')}`),
         description: Ember.String.htmlSafe(`Ideated and designed an iOS and web platform to help travelling groups to split bills, using ${rawLink(links.coreData, 'Core Data')}, ${rawLink(links.react, 'React')}, and ${rawLink(links.socketIo, 'Socket.IO')}, in a fast-paced startup team.`),
