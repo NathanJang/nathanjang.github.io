@@ -15,20 +15,17 @@ addons:
 
 cache:
   directories:
-    - $HOME/.npm
+    - $(yarn cache dir)
 
 env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
 
-before_install:
-  - npm config set spin false
-
 script:
-  - npm run lint:hbs
-  - npm run lint:js
-  - npm run build-prod
+  - yarn lint:hbs
+  - yarn lint:js
+  - yarn build-prod
 
 
 deploy:
