@@ -6,6 +6,9 @@ module.exports = function(defaults) {
     // Add options here
     fingerprint: {
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg', 'pdf']
+    },
+    'ember-cli-template-lint': {
+      testGenerator: 'qunit'
     }
   });
 
@@ -23,6 +26,10 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('vendor/bootstrap.css');
+  if (EmberApp.env() !== 'production') {
+    app.import('vendor/bootstrap.css.map', { destDir: 'assets' });
+  }
+  app.import('')
 
   return app.toTree();
 };
