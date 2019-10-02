@@ -80,4 +80,4 @@ var t=Ember.Object.extend({url:"",ariaLabel:"",icon:"",altText:"",username:""})
 e.default=t}),define("jonathanchan.me/util/project",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Ember.Object.extend({title:"",caption:null,description:"",iconPath:"",shouldMaskIcon:!1,iconAltText:"",linkTitleText:"",href:"",action:""})
 e.default=t}),define("jonathanchan.me/config/environment",[],function(){try{var e="jonathanchan.me/config/environment",t=document.querySelector('meta[name="'+e+'"]').getAttribute("content"),a={default:JSON.parse(decodeURIComponent(t))}
-return Object.defineProperty(a,"__esModule",{value:!0}),a}catch(n){throw new Error('Could not read config from meta tag with name "'+e+'".')}}),runningTests||require("jonathanchan.me/app").default.create({name:"jonathanchan.me",version:"2019.09.30+36ac386d"})
+return Object.defineProperty(a,"__esModule",{value:!0}),a}catch(n){throw new Error('Could not read config from meta tag with name "'+e+'".')}}),runningTests||require("jonathanchan.me/app").default.create({name:"jonathanchan.me",version:"2019.10.02+3ac87434"})
