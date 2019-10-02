@@ -22,6 +22,7 @@ export default {
 
   epic: 'https://nuisepic.com',
   racket: 'https://racket-lang.org',
+  rust: 'https://www.rust-lang.org',
   ember: 'https://emberjs.com'
 
 };

@@ -29,7 +29,7 @@ export default Ember.Component.extend({
       Project.create({
         title: 'MeowlWatch',
         caption: 'Independent iOS App',
-        description: Ember.String.htmlSafe(`Designed and launched an app for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. ${rawLink(links.meowlwatchSource, 'Source Code')}`),
+        description: Ember.String.htmlSafe(`Launched an independent iOS app, for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. Integrated with iOS using StoreKit, NotificationCenter, and SiriKit. ${rawLink(links.meowlwatchSource, 'Source Code')}`),
         iconPath: '/assets/meowlwatch-logo.png',
         shouldMaskIcon: true,
         iconAltText: 'MeowlWatch Logo',
@@ -39,7 +39,7 @@ export default Ember.Component.extend({
       Project.create({
         title: '.dev',
         caption: 'Co-Founder and Software Development Director',
-        description: 'Founded a community for more than 50 motivated developers. Inspired members to overcome product hurdles by holding workshops about technologies, UX, and ideation, exchanging expertise with fellow co-founders.',
+        description: 'Founded a new community for motivated developers, with 50 active members, emphasising inclusivity, diversity, and applied exploration. Inspired members to overcome product hurdles by organising workshops about industry technologies, academic topics, UX, and entrepreneurship.',
         iconPath: '/assets/dotdev-icon.png',
         shouldMaskIcon: false,
         iconAltText: '.dev Logo',
@@ -48,21 +48,35 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'Undergrad Teaching Assistant',
-        caption: 'Data Structures and Algorithms',
-        description: Ember.String.htmlSafe(`Previously, Fundamentals of Computer Programming in ${rawLink(links.racket, 'Racket')} since March 2017. Focused on tangible analogies that helped students to achieve above-average A grades. Empowered students to learn independently by composing a comprehensive study guide, to help students thrive beyond office hours.`),
-        iconPath: '/assets/racket-logo.svg',
-        iconAltText: 'Racket',
+        caption: 'Rust, Data Structures, Intro to CS',
+        description: Ember.String.htmlSafe(`Previously ${rawLink(links.rust, 'Rust')}, and Intro to CS in ${rawLink(links.racket, 'Racket')}. Focused on tangible analogies that helped students to achieve above-average A grades.`),
+        iconPath: '/assets/rust-logo.svg',
+        iconAltText: 'Rust',
         linkTitleText: 'See a study guide that I wrote.',
         href: links.eecs111StudyGuide
       }),
       Project.create({
         title: 'Cooking',
         caption: 'I live for food.',
-        description: 'My goal is to make the perfect bowl of Japanese ramen from scratch. Check out my cooking Instagram!',
+        description: 'Ongoing projects include ramen, bread, and pastries. Check out my cooking Instagram!',
         iconPath: '/assets/cooking.svg',
         iconAltText: 'Cooking',
         linkTitleText: 'See my cooking Instagram.',
         href: links.palatablePuns
+      }),
+      Project.create({
+        title: 'Language',
+        description: 'I\'m learning French and pursuing a Linguistics minor. Teach me your language!',
+        iconPath: '/assets/language.svg',
+        iconAltText: 'Bicycle',
+        action: function () {}
+      }),
+      Project.create({
+        title: 'Cycling',
+        description: 'I love cycling when the weather\'s nice! I believe that we should structure our transportation around bikes and public transit, for a better world.',
+        iconPath: '/assets/cycling.svg',
+        iconAltText: 'Bicycle',
+        action: function () {}
       }),
       Project.create({
         title: 'This Website!',
