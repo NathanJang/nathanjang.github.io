@@ -15,7 +15,6 @@
     "lint:hbs": "ember-template-lint app/templates/",
     "lint:js": "eslint app/",
     "start": "ember serve",
-    "deploy": "./bin/deploy"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",

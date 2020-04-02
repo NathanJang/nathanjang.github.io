@@ -44,7 +44,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-`npm run deploy` will build and push all changes automatically.
+Travis CI is configured to deploy changes from branch `ember` on push.
 
 ## Further Reading / Useful Links
 
