@@ -44,7 +44,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Travis CI is configured to deploy changes from branch `ember` on push.
+TravisCI.com is configured to deploy changes from branch `ember` on push.
 
 ## Further Reading / Useful Links
 

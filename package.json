@@ -14,7 +14,7 @@
     "build-prod": "ember build -prod",
     "lint:hbs": "ember-template-lint app/templates/",
     "lint:js": "eslint app/",
-    "start": "ember serve",
+    "start": "ember serve"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
