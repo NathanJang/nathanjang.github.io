@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('goodbye-meowlwatch');
 });
 
 export default Router;
