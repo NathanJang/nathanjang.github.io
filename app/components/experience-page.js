@@ -28,13 +28,16 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'MeowlWatch',
-        caption: 'Independent iOS App',
-        description: Ember.String.htmlSafe(`Launched an independent iOS app, for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 4,500 downloads, 60 paying users, 100 daily users. Integrated with iOS using StoreKit, NotificationCenter, and SiriKit. ${rawLink(links.meowlwatchSource, 'Source Code')}`),
+        caption: 'Independent iOS App (discontinued)',
+        description: Ember.String.htmlSafe(`Launched an independent iOS app, for students to budget meals and find places to eat. Created as personal-use app and became popular among Northwestern students. 8,000 downloads, 60 paying users, hundreds of daily users. Integrated with iOS using StoreKit and NotificationCenter. ${rawLink(links.meowlwatchSource, 'Source Code')}`),
         iconPath: '/assets/meowlwatch-logo.png',
         shouldMaskIcon: true,
         iconAltText: 'MeowlWatch Logo',
-        linkTitleText: 'See MeowlWatch on the App Store.',
-        href: links.meowlwatch
+        linkTitleText: 'Read my post on my journey.',
+        // href: links.meowlwatch,
+        action: function () {
+           Ember.getOwner(this).lookup('router:main').transitionTo('goodbye-meowlwatch');
+         }.bind(this)
       }),
       Project.create({
         title: '.dev',
