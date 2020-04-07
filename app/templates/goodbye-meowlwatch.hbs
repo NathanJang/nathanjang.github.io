@@ -33,16 +33,16 @@
         <p>
           MeowlWatch&apos;s main use case is for students to check their remaining meal plan balances through the app, after signing in once.
           This was accomplished by polling the web version of the balance check page on Northwestern Dining&apos;s own website, using NetID credentials that are securely stored on the user&apos;s device.
-          At the time of writing, it appears that Northwestern Dining has permanently taken down this feature on their website entirely, meaning MeowlWatch will no longer be able to provide the balance check feature either.
+          At the time of writing, it appears that Northwestern Dining has permanently taken down this feature on their website, meaning MeowlWatch will no longer be able to provide the balance check feature either.
           I am no longer able to provide a meaningful app experience without this essential feature.
-          This, coupled with the recent closure of campus facilities, and the apparent direction of NU Dining&apos;s long-term plans, has led me to discontinue the app.
+          This, coupled with the recent closure of campus facilities, has led me to discontinue the app.
         </p>
         <p>
-          The rest of this post tells the story behind the app, as a goodbye to this project that&apos;s become associated with my own journey at Northwestern. Perhaps its story can help you with your own project, too.
+          The rest of this post tells the story behind MeowlWatch, as a final reflection this project that&apos;s become associated with my own journey at Northwestern. Perhaps its story can help you with your own project, too.
         </p>
         <p>
           <strong>
-            Scroll to the bottom for a gnarly graph :)
+            Scroll to the bottom for a dope graph :)
           </strong>
         </p>
 
@@ -51,7 +51,7 @@
         </div> --}}
 
         <hr class="my-5">
-        <p><em>5 minute read</em></p>
+        <p><em>6 minute read</em></p>
 
         <h3>The story of the Bodge 🔨</h3>
         <p>
@@ -59,7 +59,7 @@
           No more than a hastily
           <a href="https://youtu.be/lIFE7h3m40U" target="_blank" rel="noopener noreferrer">bodged-together</a> {{!Tom Scott&apos;s Art of the Bodge}}
           app for me to check my own meal balances, it became obvious that this could be put to use for many more people.
-          In a quiet little house in the suburbs of Houston, where I was visiting a friend over Spring Break in 2017, I got to work polishing it up, that it was pretty enough for publication.
+          In a quiet little house in the suburbs of Houston, where I was visiting a friend over Spring Break in 2017, I got to work polishing it up, until it was neat enough for publication.
         </p>
         <div class="text-center">
           <img src="/assets/goodbye-meowlwatch/2017-screenshot-1.png" class="img-fluid gbm-screenshot" alt="Screenshots from 2017.">
@@ -70,20 +70,21 @@
         <p>
           The app was really simple at first, just a sign-in page and a simple key-value table of the user&apos;s remaining meal swipes.
           Eventually, other features got added, including directions to nearby dining locations and when they&apos;re open, as well as what&apos;s on the menu at each location.
-          There were also certain integrations with the operating system, including the today-widget and some plans to include Siri integration (&quot;Hey Siri, what&apos;s my Cat Cash balance?&quot;), and an Apple Watch app.
+          There were also certain integrations with the operating system, including the today-widget, native dark mode, some plans to include Siri integration (&quot;Hey Siri, what&apos;s my Cat Cash balance?&quot;), and an Apple Watch app.
           I even localised the app into Simplified and Traditional Chinese, and French.
           I wanted to make the app a fully-fledged iOS app experience, and definitely learned a lot about really specific parts of mobile app design and development that you just wouldn&apos;t think about unless you went through it.
         </p>
         <p>Some thoughts off the top of my head:</p>
         <ul>
           <li>How do you present all this information in a clean way, but also without making the user do a single tap to get what they need? Empathy is key in design.</li>
+          <li>What extra features could I add on top of the main use case, without making the app lose its focus?</li>
           <li>How do you translate a specific, local concept like &quot;meal exchange/equivalency&quot; into another language, like Chinese and French?</li>
           <li>How do you balance the wants of the user, like an Android version, with my selfish want to implement niche things like localisation and iOS integration, instead? Sorry, user :)</li>
           <li>Is this entrepreneurship, a public service, or my own playground? It definitely didn&apos;t earn any money.</li>
           <li>Turns out Apple is pretty strict when it comes to In-App Purchases, as frustrating as it was to work with such a buggy library.</li>
         </ul>
         <p>
-          The code has gotten really messy from years of me throwing features in, here and there.
+          The code has gotten messy from years of me throwing features in, here and there.
           It might be a good thing that I can spare someone the torment of trying to pick up this project.
           That being said, I would never have been able to launch this if I waited until it was perfect &mdash; it would never be.
           Sometimes you just need to lower your impossible standards to make progress, and that&apos;s okay.
@@ -104,15 +105,15 @@
         <h3>Looking back 👀</h3>
         <p>
           I never expected it to get this far, at all.
-          The way the app pulled meal balance data is undocumented at best, and unauthorised at worst.
-          At one point, I tried to get Northwestern Dining to at least help me advertise the app, but that discussion didn&apos;t go anywhere.
+          The way the app pulled meal balance data is undocumented at best, and criminal at worst.
+          At one point, I tried to get Northwestern Dining to at least help me advertise the app, but that discussion didn&apos;t go anywhere, so the app stayed unsanctioned.
           I half-expected an inevitable strongly-worded letter from someone about unauthorised use of the school network, considering a good amount of traffic to their server would have been from my users.
           That letter never came, though, to my relief.
         </p>
         <p>
           Maybe at some point someone developed a routine to check their Equivalency balance every week before they expired.
           Maybe someone got crazy tipsy but still had their wits together to check on their points before buying out the chips and salsa shelf at Lisa&apos;s.
-          I&apos;ll never know, but I sincerely hope that this app has been useful to someone out there.
+          These stories, I&apos;ll never know, but I sincerely hope that this app has been useful to someone out there.
           If you have a story, <LinkTo @route="index">let me know</LinkTo>! I&apos;d love to hear it.
         </p>
 
@@ -122,7 +123,8 @@
         </div>
 
         <p>
-          I couldn&apos;t have done this without the support of my friends and family, who encouraged me to keep up with this project.
+          Thanks are due to my friends and family, who empowered me to keep up with this project.
+          I couldn&apos;t have done this without their support.
         </p>
 
         <h3>Looking forward 👏</h3>
@@ -130,11 +132,17 @@
           There are many other app opportunities in on-campus food that MeowlWatch could have ventured into.
           I challenge anyone able, and still participating on campus, to make something that can make the lives of those around you better.
           Some ideas:
-          <ul>
-            <li>An app to distribute your student group&apos;s leftovers from catering.</li>
-            <li>An app to offer meal swipes to students who may not be food-secure.</li>
-            <li>An app for students to offer to pick up food for others in the same dorm, from a restaurant that they were going to anyway.</li>
-          </ul>
+        </p>
+        <ul>
+          <li>An app to distribute your student group&apos;s leftovers from catering.</li>
+          <li>An app to offer meal swipes to students who may not be food-secure.</li>
+          <li>An app for students to offer to pick up food for others in the same dorm, from a restaurant that they were going to anyway.</li>
+        </ul>
+        <p>
+          The
+          <a href="https://github.com/NathanJang/MeowlWatch" target="_blank" rel="noopener noreferrer">source code</a>
+          will remain available online for reference only.
+          If you&apos;d like to fork this project, please let me know!
         </p>
 
         <h3>Technical FAQ 🤓</h3>
@@ -149,20 +157,20 @@
         <p><em>How much money did you make from this?</em></p>
         <p>
           Net loss.
-          It costs $100 per year to host stuff on the App Store, ad revenue and tips couldn&apos;t make up for it, and I couldn&apos;t be bothered to look for other revenue streams.
+          It cost $100 per year to host stuff on the App Store, ad revenue and tips couldn&apos;t make up for it, and I couldn&apos;t be bothered to look for other revenue streams.
           I did have entrepreneurial plans at first, but I made it closer to a public utility as time went on.
           I kept it up for as long as people were using it :)
         </p>
 
         <h3>Finishing Stats 🏁</h3>
         <p>
-          I am incredibly humbled that MeowlWatch has had, through its three-year lifetime:
+          I am incredibly humbled that MeowlWatch has had, through its three-year lifetime, since launching in 2017, on a campus of about 8,000 undergrads:
         </p>
         <ul>
-          <li>More than 140,000 impressions on the App Store</li>
           <li>More than 8,000 unique downloads</li>
-          <li>Thousands of weekly app sessions (estimated), before campus closure</li>
-          <li>More than 123,000 lifetime opt-in app sessions, since launching in 2017</li>
+          <li>A few thousand weekly app sessions (estimated), before campus closure</li>
+          <li>More than 123,000 lifetime opt-in app sessions</li>
+          <li>More than 140,000 impressions on the App Store</li>
           <li>4.9 out of 5 stars on the App Store, over 50 reviews</li>
           <li>Dozens of users who chose to support the app financially</li>
         </ul>
