@@ -4,7 +4,7 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
-  classNames: Ember.A(['experience-container']),
+  classNames: Ember.A(['experience-container', 'py-1']),
 
   projects: Ember.computed(function () {
     return Ember.A([

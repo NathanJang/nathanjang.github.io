@@ -2,7 +2,6 @@
   background: linear-gradient(to bottom, #1b3860, #2e5fa2);
   background-repeat: repeat-x;
   color: #ddd;
-  padding: 50px 0 1px;
   margin-bottom: 0;
 }
 
@@ -16,8 +15,12 @@
   font-size: 1.5rem;
 }
 
+.experience-blog-links a {
+  color: unset;
+}
+
 .project-cards-container {
-  margin-top: 40px;
+  /*margin: 40px auto;*/
   width: 100%;
 }
 
