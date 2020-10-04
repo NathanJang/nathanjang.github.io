@@ -77,9 +77,9 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'Language',
-        description: 'I\'m learning French and pursuing a Linguistics minor. Teach me your language!',
+        description: 'I\'m learning French and love anything related to language. Teach me your yours!',
         iconPath: '/assets/language.svg',
-        iconAltText: 'Bicycle',
+        iconAltText: 'Language',
         action: function () {}
       }),
       Project.create({
@@ -100,7 +100,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'And More To Come.',
-        description: 'Hire me maybe? :)',
+        description: '',
         iconPath: '/assets/heart.svg',
         iconAltText: 'Heart',
         linkTitleText: 'See my LinkedIn profile.',
