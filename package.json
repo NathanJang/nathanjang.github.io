@@ -1,9 +1,9 @@
 {
   "name": "jonathanchan.me",
-  "version": "2020.10.04",
+  "version": "2022.09.16",
   "description": "My personal website.",
   "license": "MIT",
-  "author": "Jonathan Chan <jonchanyc@outlook.com>",
+  "author": "Jonathan Chan <hi@jonathanchan.me>",
   "directories": {
     "doc": "doc",
     "test": "tests"
