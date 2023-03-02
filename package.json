@@ -14,7 +14,8 @@
     "build-prod": "ember build -prod",
     "lint:hbs": "ember-template-lint app/templates/",
     "lint:js": "eslint app/",
-    "start": "ember serve"
+    "start": "ember serve",
+    "deploy": "ember github-pages:commit --branch master --message \"Deploy $(git rev-parse --short HEAD)\""
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
