@@ -67,6 +67,14 @@ export default Ember.Component.extend({
         href: links.eecs111StudyGuide
       }),
       Project.create({
+        title: 'Aviation',
+        caption: 'Private Pilot, ASEL',
+        description: 'I\'m proud to have accomplished this since loving flying as a child!',
+        iconPath: '/assets/cessna.svg',
+        iconAltText: 'Silhouette of a high-wing Cessna',
+        action: function () {}
+      }),
+      Project.create({
         title: 'Cooking',
         caption: 'I live for food.',
         description: 'Ongoing projects include ramen, bread, and pastries. Check out my cooking Instagram!',
@@ -77,7 +85,7 @@ export default Ember.Component.extend({
       }),
       Project.create({
         title: 'Language',
-        description: 'I\'m learning French and love anything related to language. Teach me your yours!',
+        description: 'I\'m learning French and love anything related to language. Teach me yours!',
         iconPath: '/assets/language.svg',
         iconAltText: 'Language',
         action: function () {}

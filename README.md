@@ -44,7 +44,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-TravisCI.com is configured to deploy changes from branch `ember` on push.
+Run `yarn commit-prod` and `git push origin master`.
 
 ## Further Reading / Useful Links
 

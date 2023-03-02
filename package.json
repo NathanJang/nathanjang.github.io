@@ -1,6 +1,6 @@
 {
   "name": "jonathanchan.me",
-  "version": "2023.02.27",
+  "version": "2023.03.02",
   "description": "My personal website.",
   "license": "MIT",
   "author": "Jonathan Chan <hi@jonathanchan.me>",
@@ -15,7 +15,7 @@
     "lint:hbs": "ember-template-lint app/templates/",
     "lint:js": "eslint app/",
     "start": "ember serve",
-    "deploy": "ember github-pages:commit --branch master --message \"Deploy $(git rev-parse --short HEAD)\""
+    "commit-prod": "ember github-pages:commit --branch master --message \"Deploy $(git rev-parse --short HEAD)\""
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
