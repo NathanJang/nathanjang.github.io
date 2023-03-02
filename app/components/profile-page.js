@@ -4,7 +4,7 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
-  profilePictureSrcs: Ember.A(['/assets/profile-picture.jpg', '/assets/profile-picture-secondary.jpg']),
+  profilePictureSrcs: Ember.A(['/assets/profile-picture-0.jpg', '/assets/profile-picture-1.jpg', '/assets/profile-picture-2.jpg']),
 
   currentProfilePictureIndex: 0,
 
