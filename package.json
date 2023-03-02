@@ -15,7 +15,7 @@
     "lint:hbs": "ember-template-lint app/templates/",
     "lint:js": "eslint app/",
     "start": "ember serve",
-    "commit-prod": "ember github-pages:commit --branch master --destination . --message \"Deploy $(git rev-parse --short HEAD)\""
+    "commit-prod": "yarn build-prod && ember github-pages:commit --branch master --destination . --message \"Deploy $(git rev-parse --short HEAD)\""
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
