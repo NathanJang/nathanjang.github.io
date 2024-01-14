@@ -5,6 +5,7 @@ export default {
   // appStore: 'https://itunes.apple.com/us/developer/yik-chun-jonathan-chan/id1219875691',
   resume: '/JonathanChan.pdf',
 
+  appleVisionPro: 'https://www.apple.com/apple-vision-pro',
   convoy: 'https://convoy.com',
   fulcrumLabs: 'https://startup.fulcrumgt.com',
   fulcrumgt: 'https://fulcrumgt.com',

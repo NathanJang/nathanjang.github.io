@@ -9,8 +9,18 @@ export default Ember.Component.extend({
   projects: Ember.computed(function () {
     return Ember.A([
       Project.create({
+        title: 'Apple',
+        caption: 'AR/VR Software Engineer',
+        description: 'Building experiences for Apple Vision Pro and visionOS.',
+        iconPath: '/assets/visionos-wordmark.svg',
+        shouldMaskIcon: false,
+        iconAltText: 'visionOS Wordmark',
+        href: links.appleVisionPro
+      }),
+      Project.create({
         title: 'Convoy',
-        caption: 'Software Engineer (Full Time)',
+        caption: 'Software Engineer',
+        description: 'Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.',
         iconPath: '/assets/convoy-logo.svg',
         shouldMaskIcon: false,
         iconAltText: 'Convoy Logo',
