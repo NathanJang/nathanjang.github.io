@@ -63,6 +63,11 @@
   .profile-subtitle {
     font-size: 20px;
   }
+
+  .profile-subsubtitle {
+    margin-top: 8pt;
+    font-size: 14px;
+  }
 }
 
 .profile-icon {

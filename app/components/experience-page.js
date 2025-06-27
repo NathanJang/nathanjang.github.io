@@ -10,17 +10,17 @@ export default Ember.Component.extend({
     return Ember.A([
       Project.create({
         title: 'Apple',
-        caption: 'AR/VR Software Engineer',
-        description: 'Building experiences for Apple Vision Pro and visionOS.',
-        iconPath: '/assets/visionos-wordmark.svg',
+        caption: 'Software Engineer',
+        description: Ember.String.htmlSafe('Building experiences for Apple&nbsp;Vision&nbsp;Pro, iOS, and other platforms.<br><br>Brought Image&nbsp;Playground, Apple&nbsp;Intelligence, and more to the world of spatial computing.'),
+        iconPath: '/assets/apple-vision-pro.svg',
         shouldMaskIcon: false,
-        iconAltText: 'visionOS Wordmark',
+        iconAltText: 'Apple Vision Pro',
         href: links.appleVisionPro
       }),
       Project.create({
         title: 'Convoy',
         caption: 'Software Engineer',
-        description: 'Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.',
+        description: Ember.String.htmlSafe('Convoy is a mobile and web marketplace for freight brokers, shippers, and carriers.<br><br>Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.'),
         iconPath: '/assets/convoy-logo.svg',
         shouldMaskIcon: false,
         iconAltText: 'Convoy Logo',
@@ -29,7 +29,7 @@ export default Ember.Component.extend({
       Project.create({
         title: 'Convoy',
         caption: 'Software Engineering Intern (2019)',
-        description: Ember.String.htmlSafe('Designed and launched a new automation workflow for shipment operations team to better manage staff allocation.<br />Saved 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.'),
+        description: Ember.String.htmlSafe('Designed and launched a new automation workflow for shipment operations team to better manage staff allocation.<br><br>Saved 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.'),
         iconPath: '/assets/convoy-logo.svg',
         shouldMaskIcon: false,
         iconAltText: 'Convoy Logo',
@@ -92,7 +92,8 @@ export default Ember.Component.extend({
       // }),
       Project.create({
         title: 'This Website!',
-        caption: Ember.String.htmlSafe(`${rawLink('https://travis-ci.com/NathanJang/nathanjang.github.io', `<img src="${links.thisSiteTravisBadge}" />`)}`),
+        caption: '',
+        // caption: Ember.String.htmlSafe(`${rawLink('https://travis-ci.com/NathanJang/nathanjang.github.io', `<img src="${links.thisSiteTravisBadge}" />`)}`),
         description: Ember.String.htmlSafe(`Built with ${rawLink(links.ember, 'Ember.js')}.`),
         iconPath: '/assets/ember-logo.png',
         iconAltText: 'Ember JS',

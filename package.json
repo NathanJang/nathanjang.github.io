@@ -1,6 +1,6 @@
 {
   "name": "jonathanchan.me",
-  "version": "2024.01.14",
+  "version": "2025.06.28",
   "description": "My personal website.",
   "license": "MIT",
   "author": "Jonathan Chan <hi@jonathanchan.me>",
@@ -48,10 +48,5 @@
   "engines": {
     "node": ">= 10"
   },
-  "private": true,
-  "ember-addon": {
-    "paths": [
-      "lib/google-analytics"
-    ]
-  }
+  "private": true
 }

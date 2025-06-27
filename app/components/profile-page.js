@@ -4,7 +4,7 @@ import links from '../util/links';
 
 export default Ember.Component.extend({
 
-  profilePictureSrcs: Ember.A(['/assets/profile-picture-0.jpg', '/assets/profile-picture-1.jpg', '/assets/profile-picture-2.jpg']),
+  profilePictureSrcs: Ember.A(['/assets/profile-picture-0.jpg', '/assets/profile-picture-1.jpg', '/assets/profile-picture-2.jpg', '/assets/profile-picture-3.jpg']),
 
   currentProfilePictureIndex: 0,
 
@@ -28,19 +28,19 @@ export default Ember.Component.extend({
       altText: 'Resume Icon',
       username: 'Resume'
     }),
-    ProfileLink.create({
-      url: links.github,
-      ariaLabel: 'GitHub Profile',
-      icon: '/assets/github-icon.png',
-      altText: 'GitHub Icon',
-      username: 'NathanJang'
-    }),
+    // ProfileLink.create({
+    //   url: links.github,
+    //   ariaLabel: 'GitHub Profile',
+    //   icon: '/assets/github-icon.png',
+    //   altText: 'GitHub Icon',
+    //   username: 'NathanJang'
+    // }),
     ProfileLink.create({
       url: links.linkedin,
       ariaLabel: 'LinkedIn Profile',
       icon: '/assets/linkedin-icon.png',
       altText: 'LinkedIn Icon',
-      username: 'jonathanchanyc'
+      username: 'LinkedIn'
     }),
     // ProfileLink.create({
     //   url: links.appStore,
