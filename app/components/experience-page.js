@@ -4,7 +4,7 @@ import Project from '../util/project';
 import links from '../util/links';
 
 export default class ExperiencePage extends Component {
-  projects = [
+  currentProjects = [
     new Project({
       title: 'Apple',
       caption: 'Software Engineer',
@@ -16,9 +16,12 @@ export default class ExperiencePage extends Component {
       iconAltText: 'Apple Vision Pro',
       href: links.appleVisionPro,
     }),
+  ]
+
+  pastProjects = [
     new Project({
       title: 'Convoy',
-      caption: 'Software Engineer',
+      caption: htmlSafe('Software Engineer (2020&ndash;2023)'),
       description: htmlSafe(
         'Convoy is a mobile and web marketplace for freight brokers, shippers, and carriers.<br><br>Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.',
       ),

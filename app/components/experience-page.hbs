@@ -1,4 +1,20 @@
 <div class="experience-container py-1">
+  <h1 class="experience-heading mt-5">Current Projects</h1>
+  {{! <p class="experience-caption text-center">Click to find out!</p> }}
+  <div class="project-cards-container container-fluid mt-3">
+    <div class="row">
+      {{#each this.currentProjects as |project index|}}
+        <ProjectCard
+          @project={{project}}
+          @projectCardShouldBeFullWidth={{this.projectCardShouldBeFullWidth
+            index
+            this.currentProjects.length
+          }}
+        />
+      {{/each}}
+    </div>
+  </div>
+
   <h1 class="experience-heading mt-5">Blog Posts</h1>
   <div class="project-cards-container container-fluid mt-3">
     <ul class="experience-blog-links list-unstyled text-light lead">
@@ -8,23 +24,22 @@
           class="link-light link-underline-opacity-0 link-underline-opacity-100-hover"
         >{{!
           }}April 7, 2020 &mdash;
-          <em>Goodbye, MeowlWatch</em>
+          <em>Goodbye, MeowlWatch 👋</em>
         </LinkTo>
       </li>
     </ul>
   </div>
 
-  <h1 class="experience-heading mt-5">Current &amp; Past Projects</h1>
+  <h1 class="experience-heading mt-5">Past Projects</h1>
   {{! <p class="experience-caption text-center">Click to find out!</p> }}
   <div class="project-cards-container container-fluid mt-3">
     <div class="row">
-      {{#each this.projects as |project index|}}
+      {{#each this.pastProjects as |project index|}}
         <ProjectCard
-          @thing="thing"
           @project={{project}}
           @projectCardShouldBeFullWidth={{this.projectCardShouldBeFullWidth
             index
-            this.projects.length
+            this.pastProjects.length
           }}
         />
       {{/each}}
