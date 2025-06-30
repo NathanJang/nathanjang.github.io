@@ -1,32 +1,37 @@
-import Ember from 'ember';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import ProfileLink from '../util/profile-link';
 import links from '../util/links';
 
-export default Ember.Component.extend({
+export default class ProfilePage extends Component {
+  profilePictureSrcs = [
+    '/assets/profile-picture-0.jpg',
+    '/assets/profile-picture-1.jpg',
+    '/assets/profile-picture-2.jpg',
+    '/assets/profile-picture-3.jpg',
+  ];
 
-  profilePictureSrcs: Ember.A(['/assets/profile-picture-0.jpg', '/assets/profile-picture-1.jpg', '/assets/profile-picture-2.jpg', '/assets/profile-picture-3.jpg']),
+  @tracked
+  currentProfilePictureIndex = 0;
 
-  currentProfilePictureIndex: 0,
+  get currentProfilePictureSrc() {
+    return this.profilePictureSrcs[this.currentProfilePictureIndex];
+  }
 
-  currentProfilePictureSrc: Ember.computed('currentProfilePictureIndex', function () {
-    return this.get('profilePictureSrcs')[this.get('currentProfilePictureIndex')]
-  }),
+  @action
+  handleProfilePictureClick() {
+    this.currentProfilePictureIndex =
+      (this.currentProfilePictureIndex + 1) % this.profilePictureSrcs.length;
+  }
 
-  actions: {
-    handleProfilePictureClick() {
-      this.set('currentProfilePictureIndex', (this.get('currentProfilePictureIndex') + 1) % this.get('profilePictureSrcs.length'))
-    }
-  },
-
-  classNames: Ember.A(['profile-container', 'containter-fluid']),
-
-  profileLinks: Ember.A([
-    ProfileLink.create({
+  profileLinks = [
+    new ProfileLink({
       url: links.resume,
       ariaLabel: 'Resume',
       icon: '/assets/resume-icon.svg',
       altText: 'Resume Icon',
-      username: 'Resume'
+      username: 'Resume',
     }),
     // ProfileLink.create({
     //   url: links.github,
@@ -35,12 +40,12 @@ export default Ember.Component.extend({
     //   altText: 'GitHub Icon',
     //   username: 'NathanJang'
     // }),
-    ProfileLink.create({
+    new ProfileLink({
       url: links.linkedin,
       ariaLabel: 'LinkedIn Profile',
       icon: '/assets/linkedin-icon.png',
       altText: 'LinkedIn Icon',
-      username: 'LinkedIn'
+      username: 'LinkedIn',
     }),
     // ProfileLink.create({
     //   url: links.appStore,
@@ -49,6 +54,5 @@ export default Ember.Component.extend({
     //   altText: 'App Store Icon',
     //   username: 'Jonathan Chan'
     // })
-  ])
-
-});
+  ];
+}

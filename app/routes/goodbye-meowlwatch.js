@@ -1,11 +1,10 @@
 import Route from '@ember/routing/route';
-import ScrollToTop from '../mixins/scroll-to-top';
+import { action } from '@ember/object';
 
-export default Route.extend(ScrollToTop, {
-  actions: {
-    didTransition() {
-      this._super(...arguments);
-      document.title = 'Goodbye, MeowlWatch'
-    }
+export default class GoodbyeMeowlwatchRoute extends Route {
+  @action
+  didTransition() {
+    document.title = 'Goodbye, MeowlWatch';
+    scrollTo(0, 0);
   }
-});
+}

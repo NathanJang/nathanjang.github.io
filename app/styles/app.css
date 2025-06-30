@@ -1,7 +1,6 @@
-@import 'profile.css';
-@import 'blinking-cursor.css';
-@import 'experience.css';
-@import 'util.css';
-@import 'goodbye-meowlwatch.css';
-
-@import 'ember-modal-shim.css';
+@import url("profile.css");
+@import url("blinking-cursor.css");
+@import url("experience.css");
+@import url("util.css");
+@import url("goodbye-meowlwatch.css");
+@import url("ember-modal-shim.css");

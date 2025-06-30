@@ -1,10 +1,10 @@
 export default {
-
   github: 'https://github.com/NathanJang',
   linkedin: 'https://linkedin.com/in/jonathanchanyc',
   resume: '/JonathanChan.pdf',
 
-  appleVisionPro: 'https://www.apple.com/newsroom/2025/03/apple-intelligence-comes-to-apple-vision-pro-today-with-visionos-2-4/',
+  appleVisionPro:
+    'https://www.apple.com/newsroom/2025/03/apple-intelligence-comes-to-apple-vision-pro-today-with-visionos-2-4/',
   convoy: 'https://convoy.com',
   // fulcrumLabs: 'https://startup.fulcrumgt.com',
   // fulcrumgt: 'https://fulcrumgt.com',
@@ -20,6 +20,5 @@ export default {
   // epic: 'https://nuisepic.com',
   // racket: 'https://racket-lang.org',
   // rust: 'https://www.rust-lang.org',
-  ember: 'https://emberjs.com'
-
+  ember: 'https://emberjs.com',
 };

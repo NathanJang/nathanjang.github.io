@@ -1,13 +1,23 @@
-import Ember from 'ember';
-
-export default Ember.Object.extend({
-  title: '',
-  caption: null,
-  description: '',
-  iconPath: '',
-  shouldMaskIcon: false,
-  iconAltText: '',
-  linkTitleText: '',
-  href: '',
-  action: ''
-});
+export default class Project {
+  constructor({
+    title,
+    caption,
+    description,
+    iconPath,
+    shouldMaskIcon,
+    iconAltText,
+    linkTitleText,
+    href,
+    route,
+  }) {
+    this.title = title;
+    this.caption = caption;
+    this.description = description;
+    this.iconPath = iconPath;
+    this.shouldMaskIcon = shouldMaskIcon;
+    this.iconAltText = iconAltText;
+    this.linkTitleText = linkTitleText;
+    this.href = href;
+    this.route = route;
+  }
+}

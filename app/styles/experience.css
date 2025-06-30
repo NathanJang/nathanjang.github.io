@@ -20,11 +20,11 @@
 }
 
 .project-cards-container {
-  /*margin: 40px auto;*/
+  /* margin: 40px auto; */
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .project-cards-container {
     width: 66.67%;
   }
@@ -39,11 +39,7 @@
   border-radius: 5px;
   padding: 15px;
   height: 100%;
-  -o-transition:0.15s;
-  -ms-transition:0.15s;
-  -moz-transition:0.15s;
-  -webkit-transition:0.15s;
-  transition:0.15s;
+  transition: 0.15s;
 }
 
 .project-card-cell:hover {
@@ -51,7 +47,7 @@
 }
 
 .project-card:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255 255 255 / 10%);
   cursor: pointer;
 }
 
@@ -81,5 +77,5 @@
 
 .footer-description {
   color: #eaeaea;
-  font-size: .7em;
+  font-size: 0.7em;
 }

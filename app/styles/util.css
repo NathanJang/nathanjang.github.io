@@ -1,28 +1,24 @@
-.no-select, img {
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+.no-select,
+img {
   user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
 }
 
 /** scroll indicator */
 .scroll-indicator {
   font-size: 18pt;
   animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
-  -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
   height: 0;
   min-height: 0;
 }
 
-@media (min-width: 768px) { /* >= md */
+@media (width >= 768px) {
+  /* >= md */
   .scroll-indicator {
     animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
-    -webkit-animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
   }
 }
 
@@ -30,16 +26,18 @@
   from {
     bottom: 52px;
   }
+
   to {
     bottom: 64px;
   }
 }
 
-@-webkit-keyframes bounce-scroll-indicator {
+@keyframes bounce-scroll-indicator {
   from {
     bottom: 52px;
   }
+
   to {
-    bottom:   64px;
+    bottom: 64px;
   }
 }

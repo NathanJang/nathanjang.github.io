@@ -1,0 +1,25 @@
+<a
+  class="{{unless @projectCardShouldBeFullWidth 'col-lg-6'}}
+    project-card-cell col-12"
+  href="{{@project.href}}"
+  target={{if @project.href "_blank" ""}}
+>
+  <LinkToProjectRoute @route={{@project.route}}>
+    <div class="project-card text-center d-flex">
+      <div class="my-auto w-100">
+        <img
+          src={{@project.iconPath}}
+          alt={{@project.iconAltText}}
+          class="project-card-icon
+            {{if @project.shouldMaskIcon 'project-card-icon-masked'}}"
+          aria-hidden="true"
+        />
+        <h2 class="project-card-title">{{@project.title}}</h2>
+        {{#if @project.caption}}
+          <strong class="project-card-description">{{@project.caption}}</strong>
+        {{/if}}
+        <p class="project-card-description mt-2">{{@project.description}}</p>
+      </div>
+    </div>
+  </LinkToProjectRoute>
+</a>

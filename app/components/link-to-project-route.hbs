@@ -1,0 +1,7 @@
+{{#if @route}}
+  <LinkTo @route={{@route}}>
+    {{yield}}
+  </LinkTo>
+{{else}}
+  {{yield}}
+{{/if}}

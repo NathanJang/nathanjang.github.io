@@ -1,10 +1,8 @@
 [url]: https://jonathanchan.me
 
-# [jonathanchan.me][url] [![](https://travis-ci.com/NathanJang/nathanjang.github.io.svg?branch=ember)](https://travis-ci.com/NathanJang/nathanjang.github.io)
+# [jonathanchan.me][url]
 
 This is the source code to my [personal website][url].
-
-The site is continuously deployed to GitHub Pages with Travis.
 
 To develop locally:
 
@@ -12,21 +10,23 @@ To develop locally:
 
 You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Ember CLI](https://cli.emberjs.com/release/)
+- [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
-* `git clone git@github.com:NathanJang/nathanjang.github.io.git` this repository
-* `cd nathanjang.github.io`
-* `npm install`
+- `git clone <repository-url>` this repository
+- `cd jonathanchan-me`
+- `yarn install`
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+- `yarn start`
+- Visit your app at [http://localhost:4200](http://localhost:4200).
+- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Code Generators
 
@@ -34,22 +34,27 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+- `yarn test`
+- `yarn test:ember --server`
+
+### Linting
+
+- `yarn lint`
+- `yarn lint:fix`
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+- `yarn ember build` (development)
+- `yarn build` (production)
 
 ### Deploying
 
-Run `yarn commit-prod` and `git push origin master`.
+Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- [ember.js](https://emberjs.com/)
+- [ember-cli](https://cli.emberjs.com/release/)
+- Development Browser Extensions
+  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

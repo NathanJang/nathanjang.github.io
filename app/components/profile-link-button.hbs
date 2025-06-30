@@ -1,0 +1,17 @@
+<li class="profile-link-item">
+  <a
+    href="{{@profileLink.url}}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="profile-link-button btn btn-outline-dark"
+    aria-label="{{@profileLink.ariaLabel}}"
+  >
+    <img
+      src="{{@profileLink.icon}}"
+      alt="{{@profileLink.altText}}"
+      class="profile-icon"
+      aria-hidden="true"
+    />
+    {{@profileLink.username}}
+  </a>
+</li>

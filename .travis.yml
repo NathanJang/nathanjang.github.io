@@ -27,7 +27,6 @@ script:
   - yarn lint:js
   - yarn build-prod
 
-
 deploy:
   - provider: pages
     skip-cleanup: true
@@ -37,7 +36,6 @@ deploy:
     local-dir: dist
     on:
       branch: ember
-
 
 after_deploy:
   - >
