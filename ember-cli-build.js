@@ -14,8 +14,8 @@ module.exports = function (defaults) {
       },
     },
     fingerprint: {
-      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg', 'pdf']
-    }
+      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg', 'pdf'],
+    },
   });
 
   app.import('vendor/bootstrap.css');
