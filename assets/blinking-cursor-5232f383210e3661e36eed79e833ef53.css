@@ -1,0 +1,1 @@
+.blinking-cursor{animation:1.2s blink step-end infinite}@keyframes blink{0%,100%{color:transparent}50%{color:inherit}}
