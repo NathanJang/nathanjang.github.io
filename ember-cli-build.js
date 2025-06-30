@@ -13,14 +13,15 @@ module.exports = function (defaults) {
         DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
       },
     },
-    extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg', 'pdf'],
+    fingerprint: {
+      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg', 'pdf']
+    }
   });
 
   app.import('vendor/bootstrap.css');
   if (EmberApp.env() !== 'production') {
     app.import('vendor/bootstrap.css.map', { destDir: 'assets' });
   }
-  app.import('');
 
   return app.toTree();
 };
