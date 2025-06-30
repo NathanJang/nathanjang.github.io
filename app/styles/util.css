@@ -9,6 +9,7 @@ img {
 
 /** scroll indicator */
 .scroll-indicator {
+  position: relative;
   font-size: 18pt;
   animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
   height: 0;
@@ -19,16 +20,6 @@ img {
   /* >= md */
   .scroll-indicator {
     animation: 0.5s ease-in-out infinite alternate bounce-scroll-indicator;
-  }
-}
-
-@keyframes bounce-scroll-indicator {
-  from {
-    bottom: 52px;
-  }
-
-  to {
-    bottom: 64px;
   }
 }
 
