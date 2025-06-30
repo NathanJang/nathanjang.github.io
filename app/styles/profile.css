@@ -10,7 +10,7 @@
   .profile-container {
     height: 100vh;
     overflow-y: hidden;
-    min-height: 600;
+    min-height: 600px;
   }
 }
 
@@ -27,6 +27,21 @@
 body {
   background-color: #f7f7f9;
   overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .profile-container,
+  body {
+    background-color: #1c1c1c;
+  }
+
+  .profile-title {
+    color: rgb(222 226 230);
+  }
+
+  .profile-link-item img {
+    filter: invert();
+  }
 }
 
 .profile-subtitle {

@@ -1,4 +1,7 @@
-<div class="profile-container container-fluid">
+<div
+  class="profile-container container-fluid"
+  data-bs-theme={{if this.isDarkMode "dark" "light"}}
+>
   <div class="profile-content row align-items-center">
     <div class="col-3 col-md-4 col-lg-1" aria-hidden="true"></div>
     <button
@@ -13,13 +16,10 @@
         class="profile-picture rounded-circle img-responsive center-block"
       />
     </button>
-    {{!-- <div class="visible-3 visible-md-4" aria-hidden="true"></div> --}}
+    {{! <div class="visible-3 visible-md-4" aria-hidden="true"></div> }}
 
     <div class="col-12 col-lg-8 profile-cell profile-text-cell">
-      <h1 class="profile-title">
-        Jonathan Chan
-
-      </h1>
+      <h1 class="profile-title">Jonathan Chan</h1>
       <h6 class="mt-2 mb-3">
         <code class="text-muted">
           <abbr
@@ -31,29 +31,32 @@
           />
         </code>
       </h6>
-      <p class="profile-subtitle lead">
-        Software Engineer,
+      <p
+        class="profile-subtitle lead {{if this.isDarkMode 'text-muted'}}"
+      >{{!
+        }}Software Engineer,
         <a
           href="https://www.apple.com/apple-vision-pro"
           target="_blank"
           rel="noopener noreferrer"
           class="text-body link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-        > Apple</a>
-      </p>
-      <p class="profile-subtitle lead text-muted">
-        Seattle, WA, USA
-      </p>
-      <p class="profile-subsubtitle lead text-muted">
-        <a
+        > Apple</a>{{!
+      }}</p>
+      <p class="profile-subtitle lead text-muted">Seattle, WA, USA</p>
+      <p class="profile-subsubtitle lead text-muted">{{!
+        }}<a
           href="https://www.northwestern.edu"
           target="_blank"
           rel="noopener noreferrer"
           class="text-muted link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-        >🎓 Northwestern University</a>, 2020
-      </p>
+        >🎓 Northwestern University</a>, 2020{{!
+      }}</p>
       <ul class="profile-links">
         {{#each this.profileLinks as |profileLink|}}
-          <ProfileLinkButton @profileLink={{profileLink}} />
+          <ProfileLinkButton
+            @profileLink={{profileLink}}
+            @isDarkMode={{this.isDarkMode}}
+          />
         {{/each}}
       </ul>
     </div>

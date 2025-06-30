@@ -3,7 +3,8 @@
     href="{{@profileLink.url}}"
     target="_blank"
     rel="noopener noreferrer"
-    class="profile-link-button btn btn-outline-dark"
+    class="profile-link-button btn
+      {{if @isDarkMode 'btn-outline-light' 'btn-outline-dark'}}"
     aria-label="{{@profileLink.ariaLabel}}"
   >
     <img

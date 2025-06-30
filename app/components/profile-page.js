@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 import ProfileLink from '../util/profile-link';
 import links from '../util/links';
 
@@ -55,4 +56,10 @@ export default class ProfilePage extends Component {
     //   username: 'Jonathan Chan'
     // })
   ];
+
+  @service('dark-mode') darkModeService;
+
+  get isDarkMode() {
+    return this.darkModeService.isDarkMode;
+  }
 }

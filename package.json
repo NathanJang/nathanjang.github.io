@@ -18,8 +18,9 @@
     "lint": "concurrently \"yarn:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "concurrently \"yarn:lint:css -- --fix\"",
-    "lint:fix": "concurrently \"yarn:lint:*:fix\" --names \"fix:\" --prefixColors auto && yarn format",
+    "lint:fix": "concurrently \"yarn:lint:*:fix\" --names \"fix:\" --prefixColors auto && yarn lint:format:fix",
     "lint:format": "prettier . --cache --check",
+    "lint:format:fix": "prettier . --cache --check --write",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js:fix": "eslint . --fix",
     "commit-prod": "yarn build-prod && ember github-pages:commit --branch master --destination . --message \"Deploy $(git rev-parse --short HEAD)\""
