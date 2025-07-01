@@ -16,7 +16,7 @@ export default class ExperiencePage extends Component {
       iconAltText: 'Apple Vision Pro',
       href: links.appleVisionPro,
     }),
-  ]
+  ];
 
   pastProjects = [
     new Project({

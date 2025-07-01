@@ -62,4 +62,13 @@ export default class ProfilePage extends Component {
   get isDarkMode() {
     return this.darkModeService.isDarkMode;
   }
+
+  // Only show the logo on supported platforms to avoid needing to bundle any fonts
+  canShowAppleLogo = (() => {
+    const userAgent = navigator.userAgent;
+    return ['iPhone', 'iPad', 'Macintosh']
+      .some(platform => {
+        return userAgent.includes(platform);
+      });
+  })()
 }

@@ -16,7 +16,6 @@
         class="profile-picture rounded-circle img-responsive center-block"
       />
     </button>
-    {{! <div class="visible-3 visible-md-4" aria-hidden="true"></div> }}
 
     <div class="col-12 col-lg-8 profile-cell profile-text-cell">
       <h1 class="profile-title">Jonathan Chan</h1>
@@ -40,7 +39,10 @@
           target="_blank"
           rel="noopener noreferrer"
           class="text-body link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-        > Apple</a>{{!
+        >{{!
+          }}{{if this.canShowAppleLogo " "}}{{!
+          }}Apple{{!
+        }}</a>{{!
       }}</p>
       <p class="profile-subtitle lead text-muted">Seattle, WA, USA</p>
       <p class="profile-subsubtitle lead text-muted">{{!
