@@ -100,18 +100,18 @@ export default class ExperiencePage extends Component {
     //   iconAltText: 'Language',
     //   action: function () {}
     // }),
-    new Project({
-      title: 'This Website!',
-      caption: '',
-      // caption: htmlSafe(`${this.rawLink('https://travis-ci.com/NathanJang/nathanjang.github.io', `<img src="${links.thisSiteTravisBadge}" />`)}`),
-      description: htmlSafe(
-        `Built with ${this.rawLink(links.ember, 'Ember.js')}.`,
-      ),
-      iconPath: '/assets/ember-logo.png',
-      iconAltText: 'Ember JS',
-      linkTitleText: "See this website's source code.",
-      href: links.thisSiteSource,
-    }),
+    // new Project({
+    //   title: 'This Website!',
+    //   caption: '',
+    //   // caption: htmlSafe(`${this.rawLink('https://travis-ci.com/NathanJang/nathanjang.github.io', `<img src="${links.thisSiteTravisBadge}" />`)}`),
+    //   description: htmlSafe(
+    //     `Built with ${this.rawLink(links.ember, 'Ember.js')}.`,
+    //   ),
+    //   iconPath: '/assets/ember-logo.png',
+    //   iconAltText: 'Ember JS',
+    //   linkTitleText: "See this website's source code.",
+    //   href: links.thisSiteSource,
+    // }),
     new Project({
       title: 'And More To Come.',
       description: '',
