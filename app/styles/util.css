@@ -33,3 +33,20 @@ img {
     bottom: 64px;
   }
 }
+
+/** opacity transition */
+.opacity-transition {
+  opacity: 0;
+  transform: translateY(10%);
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+  will-change: opacity, visibility;
+}
+
+.opacity-transition.opacity-transition-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

@@ -3967,7 +3967,7 @@ electron-to-chromium@^1.5.173:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.177.tgz#db730d8254959184e65320a3a0b7edcd29c54f60"
   integrity sha512-7EH2G59nLsEMj97fpDuvVcYi6lwTcM1xuWw3PssD8xzboAW7zj7iB3COEEEATUfjLHrs5uKBLQT03V/8URx06g==
 
-ember-auto-import@^2.10.0:
+ember-auto-import@^2.10.0, ember-auto-import@^2.5.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.10.0.tgz#2a29b82335eba4375d115570cbe836666ed2e7cc"
   integrity sha512-bcBFDYVTFHyqyq8BNvsj6UO3pE6Uqou/cNmee0WaqBgZ+1nQqFz0UE26usrtnFAT+YaFZSkqF2H36QW84k0/cg==
@@ -4154,7 +4154,7 @@ ember-cli-htmlbars@^5.7.1:
     strip-bom "^4.0.0"
     walk-sync "^2.2.0"
 
-ember-cli-htmlbars@^6.3.0:
+ember-cli-htmlbars@^6.0.1, ember-cli-htmlbars@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.3.0.tgz#ac85f2bbd09788992ab7f9ca832cd044fb8e5798"
   integrity sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==
@@ -4439,7 +4439,7 @@ ember-load-initializers@^3.0.1:
   resolved "https://registry.yarnpkg.com/ember-load-initializers/-/ember-load-initializers-3.0.1.tgz#507733164dd28b9216c83a8f78bbb94142d5d87f"
   integrity sha512-qV3vxJKw5+7TVDdtdLPy8PhVsh58MlK8jwzqh5xeOwJPNP7o0+BlhvwoIlLYTPzGaHdfjEIFCgVSyMRGd74E1g==
 
-ember-modifier@^4.2.2:
+"ember-modifier@^3.2.7 || ^4.0.0", ember-modifier@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/ember-modifier/-/ember-modifier-4.2.2.tgz#ad6a638dc6f82c7086031c97c2de9b094331c756"
   integrity sha512-pPYBAGyczX0hedGWQFQOEiL9s45KS9efKxJxUQkMLjQyh+1Uef1mcmAGsdw2KmvNupITkE/nXxmVO1kZ9tt3ag==
@@ -4465,6 +4465,16 @@ ember-qunit@^9.0.3:
     "@embroider/addon-shim" "^1.9.0"
     "@embroider/macros" "^1.16.12"
     qunit-theme-ember "^1.0.0"
+
+ember-ref-bucket@^5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/ember-ref-bucket/-/ember-ref-bucket-5.0.8.tgz#2ad3f24d61aa3b3eb1f8c346a7a81e7051312119"
+  integrity sha512-OYKLpryoyrwDYpKTqrGIx7cvAouv3cLwY1YkTZjXYp+NM+J5PtNu+Zmend4EtQpKQhrOI+UDEcL2ERl2fXl91g==
+  dependencies:
+    ember-auto-import "^2.5.0"
+    ember-cli-babel "^7.26.11"
+    ember-cli-htmlbars "^6.0.1"
+    ember-modifier "^3.2.7 || ^4.0.0"
 
 ember-resolver@^13.1.1:
   version "13.1.1"

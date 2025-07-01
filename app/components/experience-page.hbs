@@ -37,6 +37,7 @@
       {{#each this.pastProjects as |project index|}}
         <ProjectCard
           @project={{project}}
+          @key={{index}}
           @projectCardShouldBeFullWidth={{this.projectCardShouldBeFullWidth
             index
             this.pastProjects.length

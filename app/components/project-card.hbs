@@ -1,8 +1,11 @@
 <a
   class="{{unless @projectCardShouldBeFullWidth 'col-lg-6'}}
-    project-card-cell col-12 link-underline link-underline-opacity-0"
+    project-card-cell col-12 link-underline link-underline-opacity-0 opacity-transition
+    {{if this.isVisible 'opacity-transition-visible'}}"
   href="{{@project.href}}"
   target={{if @project.href "_blank" ""}}
+  {{create-ref "project-card-{{@key}}"}}
+  {{opacity-transition this.onVisibilityChange}}
 >
   <LinkToProjectRoute @route={{@project.route}}>
     <div class="project-card text-center d-flex">
