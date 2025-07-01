@@ -7,6 +7,10 @@
 
 .experience-heading {
   text-align: center;
+}
+
+.experience-heading,
+.experience-container p.lead {
   color: #fff;
 }
 

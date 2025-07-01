@@ -1,8 +1,30 @@
 <div class="experience-container py-1 px-2">
-  <h1 class="experience-heading mt-5">Current Projects</h1>
-  {{! <p class="experience-caption text-center">Click to find out!</p> }}
   <div class="project-cards-container container-fluid mt-3">
-    <div class="row">
+    <div class="row align-items-center">
+      <div class="text-center py-3 col-4 offset-4 offset-md-0 col-md-3">
+        <img
+          src="/assets/profile-picture-3.jpg"
+          alt="Headshot"
+          class="rounded-circle img-fluid"
+        />
+      </div>
+      <div class="col-0 col-md-1" />
+      <div class="col-12 col-md-8">
+        <p class="lead">Jonathan Chan is a Software Engineer with an enthusiasm
+          for beautiful, impactful software.</p>
+        <p class="text-opacity-75">Currently part of the team at Apple, he is
+          building experiences for Apple&nbsp;Vision&nbsp;Pro, iOS, and other
+          Apple platforms. In 2025, is team
+          <a
+            href="https://www.apple.com/newsroom/2025/03/apple-intelligence-comes-to-apple-vision-pro-today-with-visionos-2-4/"
+            target="_blank"
+            class="link-light link-underline-opacity-50 link-underline-opacity-100-hover"
+            rel="noopener noreferrer"
+          >brought Image&nbsp;Playground, Apple&nbsp;Intelligence, and more</a>
+          to the world of spatial computing.</p>
+      </div>
+    </div>
+    <div class="row my-4">
       {{#each this.currentProjects as |project index|}}
         <ProjectCard
           @project={{project}}
@@ -13,9 +35,32 @@
         />
       {{/each}}
     </div>
+    <p class="text-opacity-75">Outside of work, Jonathan enjoys cooking, taking
+      long walks, biking, driving his Miata, and sometimes flying.</p>
   </div>
 
-  <h1 class="experience-heading mt-5">Blog Posts</h1>
+  <h1 class="experience-heading mt-5">Work Experience</h1>
+  <div class="project-cards-container container-fluid mt-3">
+    <p class="text-opacity-75"><a
+        href="https://convoy.com"
+        target="_blank"
+        class="link-light link-underline-opacity-50 link-underline-opacity-100-hover"
+        rel="noopener noreferrer"
+      >Convoy</a>
+      is a mobile and web marketplace for freight brokers, shippers, and
+      carriers.</p>
+    {{#each this.pastWork as |project index|}}
+      <div class="row">
+        <ProjectCard
+          @project={{project}}
+          @key={{index}}
+          @projectCardShouldBeFullWidth="true"
+        />
+      </div>
+    {{/each}}
+  </div>
+
+  <h1 class="experience-heading mt-5">Project Showcase</h1>
   <div class="project-cards-container container-fluid mt-3">
     <ul class="experience-blog-links list-unstyled text-light lead">
       <li>
@@ -29,9 +74,6 @@
       </li>
     </ul>
   </div>
-
-  <h1 class="experience-heading mt-5">Past Projects</h1>
-  {{! <p class="experience-caption text-center">Click to find out!</p> }}
   <div class="project-cards-container container-fluid mt-3">
     <div class="row">
       {{#each this.pastProjects as |project index|}}

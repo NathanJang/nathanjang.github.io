@@ -10,7 +10,6 @@ export default class ProfilePage extends Component {
     '/assets/profile-picture-0.jpg',
     '/assets/profile-picture-1.jpg',
     '/assets/profile-picture-2.jpg',
-    '/assets/profile-picture-3.jpg',
   ];
 
   @tracked

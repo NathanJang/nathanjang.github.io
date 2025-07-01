@@ -3,8 +3,7 @@ export default {
   linkedin: 'https://linkedin.com/in/jonathanchanyc',
   resume: '/JonathanChan.pdf',
 
-  appleVisionPro:
-    'https://www.apple.com/newsroom/2025/03/apple-intelligence-comes-to-apple-vision-pro-today-with-visionos-2-4/',
+  appleVisionPro: 'https://www.apple.com/apple-vision-pro/',
   convoy: 'https://convoy.com',
   // fulcrumLabs: 'https://startup.fulcrumgt.com',
   // fulcrumgt: 'https://fulcrumgt.com',
@@ -21,4 +20,6 @@ export default {
   // racket: 'https://racket-lang.org',
   // rust: 'https://www.rust-lang.org',
   ember: 'https://emberjs.com',
+  wikipediaPpl:
+    'https://en.wikipedia.org/wiki/Pilot_certification_in_the_United_States#Private_pilot',
 };

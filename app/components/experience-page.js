@@ -7,10 +7,7 @@ export default class ExperiencePage extends Component {
   currentProjects = [
     new Project({
       title: 'Apple',
-      caption: 'Software Engineer',
-      description: htmlSafe(
-        'Building experiences for Apple&nbsp;Vision&nbsp;Pro, iOS, and other platforms.<br><br>Brought Image&nbsp;Playground, Apple&nbsp;Intelligence, and more to the world of spatial computing.',
-      ),
+      caption: 'Software Engineer since 2023',
       iconPath: '/assets/apple-vision-pro.svg',
       shouldMaskIcon: false,
       iconAltText: 'Apple Vision Pro',
@@ -18,29 +15,32 @@ export default class ExperiencePage extends Component {
     }),
   ];
 
+  pastWork = [
+    new Project({
+      title: 'Convoy',
+      caption: htmlSafe('Software Engineer (2020&ndash;2023), Intern (2019)'),
+      description: htmlSafe(
+        'Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.<br><br>Designed, implemented, and maintained business-critical features of Shipment Success&apos;s wide scope of cloud-based products, including a React Native mobile app, React web apps, NodeJS backends, GraphQL interfaces, and Kafka event streams.',
+      ),
+      iconPath: '/assets/convoy-logo.svg',
+      shouldMaskIcon: false,
+      iconAltText: 'Convoy Logo',
+      href: links.convoy,
+    }),
+    // new Project({
+    //   title: 'Convoy',
+    //   caption: 'Software Engineering Intern (2019)',
+    //   description: htmlSafe(
+    //     'Designed and launched a new automation workflow for shipment operations team to better manage staff allocation.<br><br>Saved 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.',
+    //   ),
+    //   iconPath: '/assets/convoy-logo.svg',
+    //   shouldMaskIcon: false,
+    //   iconAltText: 'Convoy Logo',
+    //   href: links.convoy,
+    // }),
+  ];
+
   pastProjects = [
-    new Project({
-      title: 'Convoy',
-      caption: htmlSafe('Software Engineer (2020&ndash;2023)'),
-      description: htmlSafe(
-        'Convoy is a mobile and web marketplace for freight brokers, shippers, and carriers.<br><br>Developed and maintained powerful mobile app and web tools to enable transparency and independence for carriers.',
-      ),
-      iconPath: '/assets/convoy-logo.svg',
-      shouldMaskIcon: false,
-      iconAltText: 'Convoy Logo',
-      href: links.convoy,
-    }),
-    new Project({
-      title: 'Convoy',
-      caption: 'Software Engineering Intern (2019)',
-      description: htmlSafe(
-        'Designed and launched a new automation workflow for shipment operations team to better manage staff allocation.<br><br>Saved 3,000 human-hours per year, and empowered teammates to spend that time reaching company goals.',
-      ),
-      iconPath: '/assets/convoy-logo.svg',
-      shouldMaskIcon: false,
-      iconAltText: 'Convoy Logo',
-      href: links.convoy,
-    }),
     // new Project({
     //   title: 'Divisi',
     //   caption: htmlSafe(`Summer 2018 Internship Project with ${this.rawLink(links.fulcrumgt, 'Fulcrum GT')}`),
@@ -87,11 +87,13 @@ export default class ExperiencePage extends Component {
     new Project({
       title: 'Aviation',
       caption: 'Private Pilot, ASEL',
-      description:
-        "I'm proud to have accomplished this in 2022, since loving flying as a child!",
+      description: htmlSafe(
+        'I&apos;m proud to have accomplished this in 2022, since loving flying as a child!<br><br>The next step would be to pursue an instrument rating.',
+      ),
       iconPath: '/assets/cessna.svg',
       iconAltText: 'Silhouette of a high-wing aircraft',
       action: function () {},
+      href: links.wikipediaPpl,
     }),
     // new Project({
     //   title: 'Language',
@@ -127,6 +129,6 @@ export default class ExperiencePage extends Component {
   }
 
   rawLink(href, content) {
-    return `<a href="${href}" target="_blank">${content}</a>`;
+    return `<a href="${href}" target="_blank" class="link-light link-underline-opacity-50 link-underline-opacity-100-hover">${content}</a>`;
   }
 }
