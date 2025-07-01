@@ -78,3 +78,8 @@
   color: #eaeaea;
   font-size: 0.7em;
 }
+
+.footer-description-ember-logo {
+  margin-top: -4pt;
+  height: 14pt;
+}
