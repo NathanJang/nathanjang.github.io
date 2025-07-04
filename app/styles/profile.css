@@ -1,8 +1,15 @@
 .profile-container {
   padding: 34px 0;
   overflow-y: hidden;
-  height: 100vmax;
-  min-height: 720px;
+  height: 85vh;
+  min-height: 40em;
+}
+
+@media (width >= 576px) {
+  /* >= sm */
+  .profile-container {
+    min-height: 700px;
+  }
 }
 
 @media (width >= 768px) {
