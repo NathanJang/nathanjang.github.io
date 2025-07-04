@@ -21,7 +21,8 @@
             class="link-light link-underline-opacity-50 link-underline-opacity-100-hover"
             rel="noopener noreferrer"
           >brought Image&nbsp;Playground, Apple&nbsp;Intelligence, and more</a>
-          to the world of spatial computing.</p>
+          to the world of spatial computing.
+          {{if this.canShowAppleLogo "ᯅ"}}</p>
       </div>
     </div>
     <div class="row my-4">
@@ -46,7 +47,7 @@
         rel="noopener noreferrer"
       >Convoy</a>
       is a mobile and web marketplace for freight brokers, shippers, and
-      carriers.</p>
+      carriers in the US. 🚚</p>
     {{#each this.pastWork as |project index|}}
       <div class="row">
         <ProjectCard
@@ -85,8 +86,8 @@
         />
       {{/each}}
     </div>
-    <p class="text-opacity-75 mt-5">Outside of work, Jonathan enjoys cooking, taking
-      long walks, biking, driving his Miata, and sometimes flying.</p>
+    <p class="text-opacity-75 mt-5">Outside of work, Jonathan enjoys cooking,
+      taking long walks, biking, driving his Miata, and sometimes flying.</p>
   </div>
 
   <FooterDescription />

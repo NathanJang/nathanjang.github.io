@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import { service } from '@ember/service';
 import { htmlSafe } from '@ember/template';
 import Project from '../util/project';
 import links from '../util/links';
@@ -130,5 +131,12 @@ export default class ExperiencePage extends Component {
 
   rawLink(href, content) {
     return `<a href="${href}" target="_blank" class="link-light link-underline-opacity-50 link-underline-opacity-100-hover">${content}</a>`;
+  }
+
+  @service('apple-logo') appleLogoService;
+
+  // Only show the logo on supported platforms to avoid needing to bundle any fonts
+  get canShowAppleLogo() {
+    return this.appleLogoService.canShowAppleLogo;
   }
 }
