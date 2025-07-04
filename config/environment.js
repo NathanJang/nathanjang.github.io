@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'jonathanchan-me',
     environment,
     rootURL: '/',
-    locationType: 'history',
+    locationType: environment === 'development' ? 'history' : 'hash',
     EmberENV: {
       EXTEND_PROTOTYPES: false,
       FEATURES: {
