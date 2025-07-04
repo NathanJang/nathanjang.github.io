@@ -8,7 +8,7 @@
 @media (width >= 768px) {
   /* >= md */
   .profile-container {
-    height: 100vh;
+    height: 95vh;
     overflow-y: hidden;
     min-height: 700px;
   }
@@ -17,7 +17,7 @@
 @media (width >= 992px) {
   /* >= lg */
   .profile-container {
-    height: 100vh;
+    height: 95vh;
     overflow-y: hidden;
     min-height: 400px;
   }
