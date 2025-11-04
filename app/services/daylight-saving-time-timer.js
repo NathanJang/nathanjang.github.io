@@ -7,13 +7,16 @@ export default class DaylightSavingTimeTimerService extends Service {
     this._scheduleTick();
   }
 
-  currentDate = new Date()
+  currentDate = new Date();
 
   _scheduleTick() {
-    setTimeout(() => {
-      this._tick();
-      this._scheduleTick()
-    }, Math.max(700, 1000 - this.currentDate.getMilliseconds()));
+    setTimeout(
+      () => {
+        this._tick();
+        this._scheduleTick();
+      },
+      Math.max(700, 1000 - this.currentDate.getMilliseconds()),
+    );
   }
 
   _tick() {
