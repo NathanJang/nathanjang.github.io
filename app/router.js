@@ -8,4 +8,5 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('goodbye-meowlwatch');
+  this.route('daylight-saving-time');
 });

@@ -1,0 +1,10 @@
+<div
+  class="content-route-container-parent"
+  data-bs-theme={{if this.isDarkMode "dark" "light"}}
+>
+  <LinkTo
+    @route="index"
+    class="content-route-container-back-button link-underline-primary link-underline-opacity-0 link-underline-opacity-50-hover"
+  >Back to Jonathan&apos;s Profile</LinkTo>
+  {{yield}}
+</div>

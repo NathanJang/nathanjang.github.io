@@ -13,17 +13,6 @@
   margin: 1em;
 }
 
-.gbm-back-button {
-  position: absolute;
-  margin: 20px;
-}
-
 .gbm-info-image {
   width: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-  .gbm-parent {
-    color: rgb(222 226 230);
-  }
 }

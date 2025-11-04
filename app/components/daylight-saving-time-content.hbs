@@ -1,0 +1,123 @@
+<ContentRouteContainer>
+  <section class="pt-5 mx-3 text-center border-bottom">
+    <h1>Current Time for Jonathan in Seattle<small>*</small></h1>
+    <p class="display-1"><span class="font-monospace">{{this.currentPDT}}</span>
+      <abbr title="Pacific Daylight Time" class="initialism">PDT</abbr></p>
+    <h1>Current Time for everyone else in Seattle<small>*</small></h1>
+    <p class="display-1"><span class="font-monospace">{{this.currentPST}}</span>
+      <abbr title="Pacific Standard Time" class="initialism">PST</abbr></p>
+    <h1>Approx. Time of Sunset<small>**</small></h1>
+    <p class="display-1">{{!
+      }}<span class="font-monospace">{{this.currentSunsetPST}}</span>
+      <abbr title="Pacific Standard Time" class="initialism">PST</abbr>
+      <span class="text-secondary fw-lighter">|</span>
+      <span class="font-monospace">{{this.currentSunsetPDT}}</span>
+      <abbr
+        title="Pacific Daylight Time"
+        class="initialism"
+      >PDT</abbr>{{!
+      }}</p>
+    <p class="lead">{{#if this.isOnSummerTime}}{{!--
+      --}}✅ There is no time difference right now.{{!--
+      --}}{{else}}{{!--
+      --}}⚠️ Seattle is one hour behind.{{!--
+      --}}{{/if}}</p>
+    <small>
+      <ul class="list-inline">
+        <li class="list-inline-item">*According to your web browser</li>
+        <li class="list-inline-item">**Using a sinusoidal approximation</li>
+      </ul>
+    </small>
+  </section>
+  <section class="mx-5 py-4">
+    <h2>What is this?</h2>
+    <p>{{!
+      }}When the US west coast switches clocks in the fall, I opt out
+      and stay on the same time zone and schedule as I had in the summer. This
+      means in the winter, my schedule is one hour earlier than everyone
+      else&apos;s.{{!
+    }}</p>
+    <h2>Why?</h2>
+    <p>{{!
+      }}I grew up in an area where there were no clock changes during
+      the year. It doesn&apos;t make much sense to me to gain or lose one hour
+      of sleep on arbitrary days in the middle of the year. When I followed the
+      clock changes in the past, I also noticed certain disruptions in my
+      circadian rhythm like when I would get hungry or tired. I prefer to keep
+      my habits consistent throughout the year, aligned with when I see daylight.{{!
+    }}</p>
+    <p>{{!
+      }}Additionally (and this is a big one), the earliest sunset in
+      Seattle during the entire year is 16:17 PST, when it is equally 17:17 PDT.
+      Why should we change clocks to make the sun appear to set earlier in the
+      winter, when we actually need more daylight in the day?{{!
+    }}</p>
+    <h2>How does it work?</h2>
+    <p>{{!
+      }}I still go to things when they physically happen, but my clocks and watches
+      just say a different time. It&apos;s as if I&apos;m living in a time zone
+      where it is Pacific Daylight Time year-round, and Pacific Standard Time is
+      not observed. Outside of my home, it is simply a different time zone, the
+      same way someone can live near a town across a national/state line where
+      it is a different time zone.{{!
+    }}</p>
+    <p>{{!
+      }}Most of Arizona observes this time zone (Mountain Standard
+      Time), where clocks do not switch throughout the year &mdash; PDT and MST
+      are equivalent in the summer, but not the winter. I keep my devices and
+      clocks in MST year-round, and any digital calendar tools will handle time
+      differences for me.{{!
+    }}</p>
+    <p>{{!
+      }}In the winter, I mentally subtract an hour when communicating
+      times with others, and sometimes specify &quot;PST&quot; to clarify.{{!
+    }}</p>
+    <h2>Doesn&apos;t it get confusing?</h2>
+    <p>{{!
+      }}No, what&apos;s confusing is changing clocks twice in the
+      middle of the year. Clocks should be consistent with the rising and
+      setting of the sun.{{!
+    }}</p>
+    <h2>Do you see any unintentional benefits in the winter?</h2>
+    <p>{{!
+      }}I am not a morning person, so an added benefit from my
+      perspective is that businesses and restaurants magically close an hour
+      later than their posted time. Instead of getting an extra hour once in the
+      fall, I get an extra hour every day 😁.{{!
+    }}</p>
+    <p>{{!
+      }}There is also now just a 2 hour time difference from the east
+      coast.{{!
+    }}</p>
+    <h2>But not everyone has a flexible schedule.</h2>
+    <p>{{!
+      }}I do admit I have a relatively flexible schedule compared to
+      people working in jobs requiring fixed hours. However, in the winter, I
+      still tend to adapt to the rest of Seattle&apos;s schedule; for example at
+      work, I won&apos;t decline a late meeting because it is later for me than
+      for others, and my lunchtime is an hour later so I can eat with my
+      coworkers. What I get out of staying on PDT is being more mindful of the
+      passing of time compared to the sun.{{!
+    }}</p>
+    <h2>When would staying on summer time not work?</h2>
+    <p>{{!
+      }}A friend living on the east coast, who used to stay on summer
+      time when they lived in the west coast, said that doing the same in the
+      east would make it a 4 hour time difference between the east and west
+      coasts.{{!
+    }}</p>
+    <h2>Additional reading</h2>
+    <p class="lead"><a
+        href="https://web.archive.org/web/20250410042753/https://www.theatlantic.com/politics/archive/2021/03/can-we-get-rid-daylight-saving-time/618281/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >The Family That Always Lives on Daylight Saving Time</a></p>
+    <small>AI summary: The Richards family in Connecticut opted to stay on
+      daylight saving time year-round, setting their devices to Atlantic time.
+      This decision, driven by their preference for more daylight in the
+      evenings, has proven beneficial for their routines. While a bill proposes
+      making daylight saving time permanent nationwide, experts emphasise the
+      importance of consistent time, regardless of whether it&apos;s standard or
+      daylight saving time.</small>
+  </section>
+</ContentRouteContainer>

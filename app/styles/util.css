@@ -54,3 +54,16 @@ img {
   transform: none;
   visibility: visible;
 }
+
+/** content-route-container */
+
+@media (prefers-color-scheme: dark) {
+  .content-route-container-parent {
+    color: rgb(222 226 230);
+  }
+}
+
+.content-route-container-back-button {
+  position: absolute;
+  margin: 20px;
+}
