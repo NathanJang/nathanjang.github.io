@@ -23,38 +23,59 @@ export default class DaylightSavingTimeContentComponent extends Component {
         (1000 * 60 * 60 * 24),
     );
 
-    const minutesAfterMidnightMin = 17 * 60 + 17; // 17:17 PDT
-    const minutesAfterMidnightMax = 21 * 60 + 11; // 21:11 PDT
-    const dayOfYearMin = 344; // 12-10
-    const dayOfYearMax = 176; // 06-25
-    const amplitude = (minutesAfterMidnightMax - minutesAfterMidnightMin) / 2;
-    const midline = (minutesAfterMidnightMin + minutesAfterMidnightMax) / 2;
+    // const minutesAfterMidnightMin = 17 * 60 + 17; // 17:17 PDT
+    // const minutesAfterMidnightMax = 21 * 60 + 11; // 21:11 PDT
+    // const dayOfYearMin = 344; // 12-10
+    // const dayOfYearMax = 176; // 06-25
+    // const amplitude = (minutesAfterMidnightMax - minutesAfterMidnightMin) / 2;
+    // const midline = (minutesAfterMidnightMin + minutesAfterMidnightMax) / 2;
 
-    if (dayOfYear <= dayOfYearMin || dayOfYear > dayOfYearMax) {
-      const frequency = Math.PI / (dayOfYearMax + (365 - dayOfYearMin));
-      const phaseShift = -(365 - dayOfYearMin);
-      const resultantMinutesAfterMidnight =
-        -amplitude * Math.cos(frequency * (dayOfYear - phaseShift)) + midline;
-      const hours = this._zeroPad(
-        Math.floor(resultantMinutesAfterMidnight / 60),
-      );
-      const minutes = this._zeroPad(
-        Math.floor(resultantMinutesAfterMidnight % 60),
-      );
-      return `${hours}:${minutes}`;
-    } else {
-      const frequency = Math.PI / (dayOfYearMin - dayOfYearMax);
-      const phaseShift = dayOfYearMax;
-      const resultantMinutesAfterMidnight =
-        amplitude * Math.cos(frequency * (dayOfYear - phaseShift)) + midline;
-      const hours = this._zeroPad(
-        Math.floor(resultantMinutesAfterMidnight / 60),
-      );
-      const minutes = this._zeroPad(
-        Math.floor(resultantMinutesAfterMidnight % 60),
-      );
-      return `${hours}:${minutes}`;
-    }
+    // if (dayOfYear <= dayOfYearMin || dayOfYear > dayOfYearMax) {
+    //   const frequency = Math.PI / (dayOfYearMax + (365 - dayOfYearMin));
+    //   const phaseShift = -(365 - dayOfYearMin);
+    //   const resultantMinutesAfterMidnight =
+    //     -amplitude * Math.cos(frequency * (dayOfYear - phaseShift)) + midline;
+    //   const hours = this._zeroPad(
+    //     Math.floor(resultantMinutesAfterMidnight / 60),
+    //   );
+    //   const minutes = this._zeroPad(
+    //     Math.floor(resultantMinutesAfterMidnight % 60),
+    //   );
+    //   return `${hours}:${minutes}`;
+    // } else {
+    //   const frequency = Math.PI / (dayOfYearMin - dayOfYearMax);
+    //   const phaseShift = dayOfYearMax;
+    //   const resultantMinutesAfterMidnight =
+    //     amplitude * Math.cos(frequency * (dayOfYear - phaseShift)) + midline;
+    //   const hours = this._zeroPad(
+    //     Math.floor(resultantMinutesAfterMidnight / 60),
+    //   );
+    //   const minutes = this._zeroPad(
+    //     Math.floor(resultantMinutesAfterMidnight % 60),
+    //   );
+    //   return `${hours}:${minutes}`;
+    // }
+
+    // https://www.had2know.org/society/sunrise-sunset-time-calculator-formula.html
+    const hoursAfterSolarNoon =
+      ((1 / 15) *
+        Math.acos(
+          -Math.tan((47.61 * Math.PI) / 180) *
+            Math.tan(
+              (23.44 *
+                Math.sin((((360 * (dayOfYear + 284)) / 365) * Math.PI) / 180) *
+                Math.PI) /
+                180,
+            ),
+        ) *
+        180) /
+      Math.PI;
+    // https://survivalschool.com/calculating-solar-noon-where-you-live/
+    const hoursAndMinutes = 12 + hoursAfterSolarNoon + 68 / 60;
+
+    const hours = this._zeroPad(Math.floor(hoursAndMinutes));
+    const minutes = this._zeroPad(Math.floor(hoursAndMinutes * 60) % 60);
+    return `${hours}:${minutes}`;
   }
 
   get currentSunsetPST() {
